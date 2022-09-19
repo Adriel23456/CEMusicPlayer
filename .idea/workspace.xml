@@ -5,7 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9346a45e-ccbf-4d30-bb14-f8ecaf000672" name="Changes" comment="El principio del fin">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/DoubleCircledLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/DoubleLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/Controller_Add_Songs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/Model_Add_Songs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/View_Add_Songs.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/View_Add_Songs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/Controller_Create_Playlist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/Model_Create_Playlist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/View_Create_Playlist.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/View_Create_Playlist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/Controller_Edit_Playlist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/Model_Edit_Playlist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/View_Edit_Playlist.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/View_Edit_Playlist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/Controller_Edit_Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/Model_Edit_Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/View_Edit_Song.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/View_Edit_Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/Controller_Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/Model_Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/View_Login.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/View_Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/Controller_Playlist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/Model_Playlist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Login.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/Controller_Songs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/Model_Songs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/View_Songs.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/View_Songs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_Principales/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_Principales/Playlist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_Principales/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_Principales/Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_Principales/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +75,19 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Adriel/Desktop/Informacion-de-Prioridad/TEC/2022/Semestre II/Algoritmos y Estructuras de Datos 1/Tareas y Quices/Tarea Extraclase#1/tarea_extraclase",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Adriel\Desktop\Informacion-de-Prioridad\TEC\2022\Semestre II\Algoritmos y Estructuras de Datos 1\Proyectos o Examenes\CE Music Player - Adriel Chaves\src\main\java\Clases_De_Interfaz_Grafica\Login" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Clases_De_Estructuras_De_Datos" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -49,7 +96,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663564817874</updated>
-      <workItem from="1663564819293" duration="283000" />
+      <workItem from="1663564819293" duration="1852000" />
     </task>
     <task id="LOCAL-00001" summary="El principio del fin">
       <created>1663564879675</created>
@@ -65,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663564965856</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="El principio del fin">
+      <created>1663565143841</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663565143841</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
