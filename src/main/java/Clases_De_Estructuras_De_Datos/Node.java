@@ -2,7 +2,7 @@ package Clases_De_Estructuras_De_Datos;
 
 /**
  * Se va a crear una clase nodo para guardar las posiciones de los datos en la memoria RAM
- * @param <T>
+ * @param <T> La clase nodo recibe un elemento T, para que pueda recibir cualquier tipo de información, esto incluye objetos
  * @author Adriel
  */
 public class Node<T>{
@@ -11,10 +11,10 @@ public class Node<T>{
     private Node<T> previous;
 
     /**
-     * Se especifica el contructor de esta clase
-     * @param next
-     * @param previous
-     * @param data
+     * Se especifica el constructor de esta clase
+     * @param next Se especifica la posición del siguiente Node
+     * @param previous Se especifica la posición del anterior Node
+     * @param data Se especifica la información del actual Node
      */
     public Node(Node<T> next, Node<T> previous, T data){
         this.next = next;

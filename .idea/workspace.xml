@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9346a45e-ccbf-4d30-bb14-f8ecaf000672" name="Changes" comment="Beta Version 1.0">
+    <list default="true" id="9346a45e-ccbf-4d30-bb14-f8ecaf000672" name="Changes" comment="Beta Version 1.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/DoubleCircledLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/DoubleCircledLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/DoubleLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/DoubleLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/CEMusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Principales/CEMusicPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Principales/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Principales/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,19 +34,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "295",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Adriel/Desktop/Informacion-de-Prioridad/TEC/2022/Semestre II/Algoritmos y Estructuras de Datos 1/Tareas y Quices/Tarea Extraclase#1/tarea_extraclase",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;295&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Adriel/Desktop/Informacion-de-Prioridad/TEC/2022/Semestre II/Algoritmos y Estructuras de Datos 1/Tareas y Quices/Tarea Extraclase#1/tarea_extraclase&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Adriel\Desktop\Informacion-de-Prioridad\TEC\2022\Semestre II\Algoritmos y Estructuras de Datos 1\Proyectos o Examenes\CE Music Player - Adriel Chaves\src\main\java\Clases_De_Interfaz_Grafica\Login" />
@@ -66,6 +65,7 @@
       <updated>1663564817874</updated>
       <workItem from="1663564819293" duration="2099000" />
       <workItem from="1663567011027" duration="2267000" />
+      <workItem from="1663608960480" duration="6866000" />
     </task>
     <task id="LOCAL-00001" summary="El principio del fin">
       <created>1663564879675</created>
@@ -95,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663566695129</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Beta Version 1.1">
+      <created>1663609099745</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663609099745</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,7 +122,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="El principio del fin" />
     <MESSAGE value="Beta Version 1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beta Version 1.0" />
+    <MESSAGE value="Beta Version 1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beta Version 1.1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
