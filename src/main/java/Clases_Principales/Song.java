@@ -9,9 +9,19 @@ public class Song {
     private String gender;
     private String artist;
     private String album;
-    private int year;
+    private String year;
     private String lyrics;
     private String MP3File;
+
+    private static Song instance;
+
+    public static Song instance(){
+        if (instance == null ){
+            instance = new Song();
+        }
+        return instance;
+    }
+
 
     /**
      * Se establece el constructor de esta clase, muy importante para la creación de las instancias de esta
@@ -23,7 +33,7 @@ public class Song {
      * @param lyrics letra
      * @param MP3File Ubicación del archivo mp3
      */
-    public Song(String name, String gender, String artist, String album, int year, String lyrics, String MP3File) {
+    public Song(String name, String gender, String artist, String album, String year, String lyrics, String MP3File) {
         this.name = name;
         this.gender = gender;
         this.artist = artist;
@@ -41,7 +51,7 @@ public class Song {
         this.gender = "";
         this.artist = "";
         this.album = "";
-        this.year = 0;
+        this.year = "";
         this.lyrics = "";
         this.MP3File = "";
     }
@@ -62,6 +72,11 @@ public class Song {
                 '}';
     }
 
+    public Song registerNewSong(String[] array){
+        return new Song(array[0], array[1], array[2], array[3], array[4], array [5], array [6]);
+    }
+
+
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
     public String getGender() {return gender;}
@@ -70,8 +85,8 @@ public class Song {
     public void setArtist(String artist) {this.artist = artist;}
     public String getAlbum() {return album;}
     public void setAlbum(String album) {this.album = album;}
-    public int getYear() {return year;}
-    public void setYear(int year) {this.year = year;}
+    public String getYear() {return year;}
+    public void setYear(String year) {this.year = year;}
     public String getLyrics() {return lyrics;}
     public void setLyrics(String lyrics) {this.lyrics = lyrics;}
     public String getMP3File() {return MP3File;}

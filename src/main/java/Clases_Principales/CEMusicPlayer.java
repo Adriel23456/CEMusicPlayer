@@ -3,6 +3,8 @@ package Clases_Principales;
 import Clases_De_Estructuras_De_Datos.DoubleCircledLinkedList;
 import Clases_De_Estructuras_De_Datos.DoubleLinkedList;
 
+import javax.swing.*;
+
 /**
  * Esta es la clase main y, va a relacionar el funcionamiento lógico de todas las otras clases principales e iniciar el programa llamando al controlador de la ventana Login.
  * @author Adriel
@@ -40,6 +42,7 @@ public class CEMusicPlayer {
                 return false;
         }
         users.add(user);
+        JOptionPane.showMessageDialog(null,"Se agrego correctamente el nuevo usuario");
         return true;
     }
 

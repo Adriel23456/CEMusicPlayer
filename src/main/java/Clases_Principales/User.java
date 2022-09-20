@@ -29,19 +29,6 @@ public class User {
         this.password = password;
     }
 
-    /**
-     * Se establece un método para verificar que la contraseña ingresada en el sistema es igual a la contraseña del usuario
-     * @param password Se recibe la supuesta contraseña de un usuario (Correo electrónico)
-     * @return Va a retornar si la contraseña ingresada es correcta o incorrecta
-     */
-    //public boolean isPassword(String password){
-    //    if (password == "Hola"){
-    //        return true;
-    //    }
-    //    else{
-    //        return false;
-    //    }
-    //}
 
     public DoubleLinkedList<Playlist> getPlaylists() {return playlists;}
     public void setPlaylists(DoubleLinkedList<Playlist> playlists) {this.playlists = playlists;}

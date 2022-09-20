@@ -2,6 +2,8 @@ package Clases_Principales;
 
 import Clases_De_Estructuras_De_Datos.DoubleLinkedList;
 
+import javax.swing.*;
+
 /**
  * Esta es la clase lógica de la ventana de "login", y, esta establecerá todos los métodos necesarios para que el controlador de la ventana pueda trabajar correctamente
  * @author Adriel
@@ -26,6 +28,7 @@ public class Login {
         for (int i = 0; i < users.getNumberOfElements(); i++){
             if (users.getElement(i).getEmail().equals(email)){
                 if (users.getElement(i).getPassword().equals(password)){
+                    JOptionPane.showMessageDialog(null,"Inicio de Sesión Correcto");
                     return true;
                 }
             }
