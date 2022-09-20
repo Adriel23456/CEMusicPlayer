@@ -4,14 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9346a45e-ccbf-4d30-bb14-f8ecaf000672" name="Changes" comment="Beta Version 1.2">
+    <list default="true" id="9346a45e-ccbf-4d30-bb14-f8ecaf000672" name="Changes" comment="Beta Version 1.3">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Playlist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/DoubleCircledLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/DoubleCircledLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/Controller_Add_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/Controller_Add_Songs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/View_Add_Songs.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/View_Add_Songs.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/View_Add_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/View_Add_Songs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/View_Create_Playlist.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/View_Create_Playlist.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/View_Create_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/View_Create_Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/View_Edit_Playlist.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/View_Edit_Playlist.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/View_Edit_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/View_Edit_Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/View_Edit_Song.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/View_Edit_Song.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/View_Edit_Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/View_Edit_Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/Controller_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/Controller_Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/Model_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/Model_Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/View_Login.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/View_Login.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/View_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/View_Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Login.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Playlist.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/View_Songs.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/View_Songs.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/View_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/View_Songs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/CEMusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Principales/CEMusicPlayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Principales/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Principales/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Principales/Song.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Principales/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,19 +54,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "295",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Adriel/Desktop/Informacion-de-Prioridad/TEC/2022/Semestre II/Algoritmos y Estructuras de Datos 1/Proyectos o Examenes/Proyecto #1/CE Music Player - Adriel Chaves/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;411&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Adriel/Desktop/Informacion-de-Prioridad/TEC/2022/Semestre II/Algoritmos y Estructuras de Datos 1/Proyectos o Examenes/Proyecto #1/Documentacion - Adriel Chaves Salazar/src/main/java/Proyecto/Graphics/Empleado/Controller.java&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Adriel\Desktop\Informacion-de-Prioridad\TEC\2022\Semestre II\Algoritmos y Estructuras de Datos 1\Proyectos o Examenes\Proyecto #1\CE Music Player - Adriel Chaves\src\main\java\Clases_De_Interfaz_Grafica\Add_Songs" />
@@ -72,7 +89,8 @@
       <updated>1663564817874</updated>
       <workItem from="1663564819293" duration="2099000" />
       <workItem from="1663567011027" duration="2267000" />
-      <workItem from="1663608960480" duration="10907000" />
+      <workItem from="1663608960480" duration="34980000" />
+      <workItem from="1663651776311" duration="1159000" />
     </task>
     <task id="LOCAL-00001" summary="El principio del fin">
       <created>1663564879675</created>
@@ -116,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663616705906</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Beta Version 1.3">
+      <created>1663622666198</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1663622666198</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +163,8 @@
     <MESSAGE value="Beta Version 1.0" />
     <MESSAGE value="Beta Version 1.1" />
     <MESSAGE value="Beta Version 1.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beta Version 1.2" />
+    <MESSAGE value="Beta Version 1.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Beta Version 1.3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

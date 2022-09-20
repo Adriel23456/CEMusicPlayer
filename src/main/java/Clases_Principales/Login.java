@@ -11,8 +11,8 @@ public class Login {
      * Este método nos permite registrar un nuevo usuario a la aplicación
      * @return Retorna un nuevo usuario
      */
-    public User registerNewUser(){
-        return new User();
+    public User registerNewUser(String[] array){
+        return new User(new DoubleLinkedList<Playlist>(), array [0], array [1], array [2], array [3]);
     }
 
     /**
@@ -25,10 +25,20 @@ public class Login {
         DoubleLinkedList<User> users = CEMusicPlayer.instance().getUsers();
         for (int i = 0; i < users.getNumberOfElements(); i++){
             if (users.getElement(i).getEmail().equals(email)){
-                return users.getElement(i).isPassword(password);
+                if (users.getElement(i).getPassword().equals(password)){
+                    return true;
+                }
             }
         }
         return false;
+    }
+    private static Login instance;
+
+    public static Login instance(){
+        if (instance == null ){
+            instance = new Login();
+        }
+        return instance;
     }
 }
 

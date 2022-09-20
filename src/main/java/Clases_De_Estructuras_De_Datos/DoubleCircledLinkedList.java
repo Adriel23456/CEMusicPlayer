@@ -38,16 +38,16 @@ public class DoubleCircledLinkedList<T>{
      * @param data Se establece que requiere de una información "T" para añadirla a la lista actual.
      */
     public void add(T data){
-        T primero = getElement(0);
         //En el caso que la lista este vacía, generara un nuevo Nodo y lo establecerá como el primero:
         if(isEmpty()){
             this.head = new Node<T>(this.head, this.head, data);
         }
-        //En el caso que la lista no este vacía, va a recorrer toda la lista hasta llegar al último elemento, y, generara el nuevo Nodo:
+        //En el caso que la lista no este vacía, va a recorrer toda la lista hasta llegar al último elemento, y,
+        // generara el nuevo Nodo:
         else{
-            Node<T> temporal = this.head;
-            for(; temporal.getNext() != primero; temporal = temporal.getNext());
-            temporal.setNext(new Node(primero, temporal, data));
+            Node<T> temporal = new Node<T>(this.head, this.head.getPrevious(), data);
+            temporal.getPrevious().setNext(temporal);
+            this.head.setPrevious(temporal);
         }
         this.numberOfElements++;
     }
@@ -59,26 +59,16 @@ public class DoubleCircledLinkedList<T>{
     public void remove(int position){
         if (this.getNumberOfElements() > position){
             Node<T> temporal = this.head;
-            for (int i = 0; i < position; i++){
+            for (int i = 0; i < position - 1; i++){
                 temporal = temporal.getNext();
             }
             //Aquí se indica que, si el nodo a eliminar es el primer elemento, entonces simplemente cambia el valor al siguiente Node y, se le indica al último elemento
-            if(temporal == this.head){
-                if (temporal.getNext() != this.head) {
-                    temporal.getPrevious().setNext(temporal.getNext());
-                    this.head = temporal.getNext();
-                }
-                else{
-                    this.head = null;
-                }
-            }
-            //Aquí se indica que, si el nodo a eliminar es otro elemento entonces, provoca que el nodo anterior ignore al actual y siga con el siguiente
-            else{
+            if (getNumberOfElements() != 1) {
                 temporal.getPrevious().setNext(temporal.getNext());
-                T primero = getElement(0);
-                if (temporal.getNext() != primero) {
-                    temporal.getNext().setPrevious(temporal.getPrevious());
-                }
+                temporal.getNext().setPrevious(temporal.getPrevious());
+            }
+            else{
+                this.head = null;
             }
             this.numberOfElements--;
         }
