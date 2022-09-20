@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Songs>
+        <Song>
+        <name>As it was</name>
+        <gender>Song</gender>
+        <artist>Song</artist>
+        <album>Song</album>
+        <year>2022</year>
+        <lyrics>Song</lyrics>
+        <MP3File>Canciones/As it was.wav</MP3File>
+        </Song>
+
+        <Song>
+            <name>Disclosure</name>
+            <gender>Song</gender>
+            <artist>Song</artist>
+            <album>Song</album>
+            <year>2022</year>
+            <lyrics>Song</lyrics>
+            <MP3File>Canciones/Disclosure.wav</MP3File>
+        </Song>
+
+        <Song>
+            <name>MIRÁ MAMÁ</name>
+            <gender>Song</gender>
+            <artist>Song</artist>
+            <album>Song</album>
+            <year>Song</year>
+            <lyrics>Song</lyrics>
+            <MP3File>Canciones/MIRÁ MAMÁ.wav</MP3File>
+        </Song>
+
+        <Song>
+            <name>Psycho (feat. Ty Dolla Sign)</name>
+            <gender>Song</gender>
+            <artist>Song</artist>
+            <album>Song</album>
+            <year>Song</year>
+            <lyrics>Song</lyrics>
+            <MP3File>Canciones/Psycho (feat. Ty Dolla Sign).wav</MP3File>
+        </Song>
+
+        <Song>
+            <name>Stuck with me</name>
+            <gender>Song</gender>
+            <artist>Song</artist>
+            <album>Song</album>
+            <year>Song</year>
+            <lyrics>Song</lyrics>
+            <MP3File>Canciones/Stuck with me.wav</MP3File>
+        </Song>
+
+        <Song>
+            <name>The Spins</name>
+            <gender>Song</gender>
+            <artist>Song</artist>
+            <album>Song</album>
+            <year>Song</year>
+            <lyrics>Song</lyrics>
+            <MP3File>Canciones/The Spins.wav</MP3File>
+        </Song>
+</Songs>
