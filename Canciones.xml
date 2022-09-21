@@ -2,61 +2,380 @@
 <Songs>
         <Song>
         <name>As it was</name>
-        <gender>Song</gender>
-        <artist>Song</artist>
-        <album>Song</album>
+        <genre>Pop rock/Funk/Synth pop</genre>
+        <artist>Harry Styles</artist>
+        <album>Harry's House</album>
         <year>2022</year>
-        <lyrics>Song</lyrics>
+        <lyrics>
+            Holdin' me back
+            Gravity's holdin' me back
+            I want you to hold out the palm of your hand
+            Why don't we leave it at that?
+            Nothin' to say
+            When everything gets in the way
+            Seems you cannot be replaced
+            And I'm the one who will stay, oh
+            In this world, it's just us
+            You know it's not the same as it was
+            In this world, it's just us
+            You know it's not the same as it was
+            As it was, as it was
+            You know it's not the same
+            Answer the phone
+            "Harry, you're no good alone
+            Why are you sittin' at home on the floor?
+            What kind of pills are you on?"
+            Ringin' the bell
+            And nobody's comin' to help
+            Your daddy lives by himself
+            He just wants to know that you're well, oh
+            In this world, it's just us
+            You know it's not the same as it was
+            In this world, it's just us
+            You know it's not the same as it was
+            As it was, as it was
+            You know it's not the same
+            Go home, get ahead, light-speed internet
+            I don't wanna talk about the way that it was
+            Leave America, two kids follow her
+            I don't wanna talk about who's doin' it first
+            As it was
+            You know it's not the same as it was
+            As it was, as it was
+        </lyrics>
         <MP3File>Canciones/As it was.wav</MP3File>
         </Song>
 
         <Song>
-            <name>Disclosure</name>
-            <gender>Song</gender>
-            <artist>Song</artist>
-            <album>Song</album>
-            <year>2022</year>
-            <lyrics>Song</lyrics>
-            <MP3File>Canciones/Disclosure.wav</MP3File>
+            <name>Latch</name>
+            <genre>Deep house/Dance/Electronica</genre>
+            <artist>Disclosure</artist>
+            <album>Settle</album>
+            <year>2013</year>
+            <lyrics>
+                You lift my heart up
+                When the rest of me is down
+                You, you enchant me, even when you're not around
+                If there are boundaries, I will try to knock them down
+                I'm latching on babe
+                Now I know what I have found
+                I feel we're close enough
+                I wanna lock in your love
+                I think we're close enough
+                Could I lock in your love, baby?
+                Now I got you in my space
+                I won't let go of you
+                Got you shackled in my embrace
+                I'm latching on to you
+                Now I got you in my space
+                I won't let go of you
+                Got you shackled in my embrace
+                I'm latching on to you
+                I'm so encaptured, got me wrapped up in your touch
+                Feel so enamored, hold me tight within your clutch
+                How do you do it, you got me losing every breath
+                What did you give me to make my heart beat out my chest?
+                I feel we're close enough
+                I wanna lock in your love
+                I think we're close enough
+                Could I lock in your love, baby?
+                I feel we're close enough
+                I wanna lock in your love
+                I think we're close enough
+                Could I lock in your love, baby?
+                Now I got you in my space
+                I won't let go of you
+                Got you shackled in my embrace
+                I'm latching on to you
+                Now I got you in my space
+                I won't let go of you
+                Got you shackled in my embrace
+                I'm latching on to you
+                I'm latching on to you (I'm latching on to you)
+                I won't let go of you (I won't let go)
+                I'm latching on to you (I don't wanna let go)
+                I won't let go of you (I won't let go, I won't let go)
+            </lyrics>
+            <MP3File>Canciones/Latch.wav</MP3File>
         </Song>
 
         <Song>
             <name>MIRÁ MAMÁ</name>
-            <gender>Song</gender>
-            <artist>Song</artist>
-            <album>Song</album>
-            <year>Song</year>
-            <lyrics>Song</lyrics>
+            <genre>Urbano latino</genre>
+            <artist>WOS</artist>
+            <album>Oscuro éxtasis</album>
+            <year>2021</year>
+            <lyrics>
+                Yo me vi largar las palabras, como un aguacero
+                Pensamientos vienen muchos, solo algunos son sincero'
+                ¿Qué voy a hacer si nunca me basé en los cero'?
+                Tengo un nudo en la garganta y en la panza un agujero
+                Sé que todo esto es pasajero
+                La agonía del enfermo, el amor en el verano
+                Su calor en el invierno
+                Pero la veo y caigo en la trampa de sentir que hay algo eterno
+                "¿Cómo estás?" Le contesto que no sé llorar
+                Por eso dibujo lágrimas
+                Ya se humedeció toda la página, así que imaginá
+                Al menos no soy una máquina
+                ¿Será que no quiero que esto muera y que se olviden de mí?
+                Si te soy sincero
+                ¿Será que no quiero darme cuenta que los que les creí
+                No eran tan sincero'?
+                Mirá mamá, estoy arriba
+                Y te juro que no hay nada más que la vida
+                Mirame acá, estoy arriba
+                Y te juro que no hay nada más que la vida
+                Mirá mamá, 'toy arriba
+                Y te juro que no hay nada más que la vida
+                Mirá mamá, estoy arriba
+                Y te juro que no hay nada más
+                Todo se deshace y quiero irme
+                Cuando no puedo pisar firme en el mismo lugar que antes
+                Pero todo son instante' y escapar no sirve
+                Para buscar ser libre nunca se hace tarde
+                Y ahora entendí
+                Que no todo está bien pero está bien así
+                Una temporada de poner énfasis
+                En entender el lado oscuro de este éxtasis
+                Y no es que sea frágil
+                Es que tengo la nostalgia con el "Sí" muy fácil
+                Sé que es difícil 'tar al lado mío
+                Les da náuseas el vaivén de lo que vivo
+                Te preguntabas por qué estando mojado me río
+                Es que me empapa este rocío compuesto por recuerdos de crío
+                En un banco rimando con frío
+                Amando a los mío', tomando y tentando al olvido
+                Y ahora dudo si eso tuyo era amor de verdad
+                O buscabas un muñeco pa' mostrar
+                Y no funcionó conmigo
+                No soy un placebo diseñado pa' engañar tu vacío
+                ¿Será que no quiero que esto muera y que se olviden de mí?
+                Si te soy sincero
+                ¿Será que no quiero darme cuenta que los que les creí
+                No eran tan sincero'?
+                Mirá mamá, estoy arriba
+                Y te juro que no hay nada más que la vida
+                Mirame acá, estoy arriba
+                Y te juro que no hay nada más que la vida
+                Mirá mamá, 'toy arriba
+                Y te juro que no hay nada más que la vida
+                Mirá mamá, estoy arriba
+                Y te juro que no hay nada más, eh
+                Mirá mamá, 'toy arriba
+                Y te juro que no hay nada más que la vida
+                Mira mamá, estoy arriba
+                Y te juro que no hay nada más
+            </lyrics>
             <MP3File>Canciones/MIRÁ MAMÁ.wav</MP3File>
         </Song>
 
         <Song>
-            <name>Psycho (feat. Ty Dolla Sign)</name>
-            <gender>Song</gender>
-            <artist>Song</artist>
-            <album>Song</album>
-            <year>Song</year>
-            <lyrics>Song</lyrics>
+            <name>Psycho (feat. Ty Dolla $ign)</name>
+            <genre>Hip Hop/Electropop</genre>
+            <artist>Post Malone/feat(Ty Dolla $ign)</artist>
+            <album>Beerbongs and Bentleys</album>
+            <year>2018</year>
+            <lyrics>
+                Damn, my AP goin' psycho, lil' mama bad like Michael
+                Can't really trust nobody with all this jewelry on you
+                My roof look like a no-show, got diamonds by the boatload
+                Come with the Tony Romo for clowns and all the bozos
+                My AP goin' psycho, lil' mama bad like Michael
+                Can't really trust nobody with all this jewelry on you
+                My roof look like a no-show, got diamonds by the boatload
+                Don't act like you my friend when I'm rollin' through my ends, though
+
+                You stuck in the friend zone, I tell that four-five the fifth
+                Hunnid bands inside my shorts, DeChino the shit
+                Try to stuff it all in, but it don't even fit
+                Know that I been with the shits ever since a jit
+                I made my first million, I'm like: Shit, this is it
+                30 for a walkthrough, man, we had that bitch lit
+                Had so many bottles, gave ugly girl a sip
+                Out the window of the Benzo, we get seen in the rent'
+                And I'm like: Whoa, man, my neck so goddamn cold
+                Diamonds wet, my t-shirt soaked
+                I got homies, let it go, oh
+                My money thick, won't ever fold
+                She said: Can I have some to hold?
+                And I can't ever tell you no
+
+                Damn, my AP goin' psycho, lil' mama bad like Michael
+                Can't really trust nobody with all this jewelry on you
+                My roof look like a no-show, got diamonds by the boatload
+                Come with the Tony Romo for clowns and all the bozos
+                My AP goin' psycho, lil' mama bad like Michael
+                Can't really trust nobody with all this jewelry on you
+                My roof look like a no-show, got diamonds by the boatload
+                Don't act like you my friend when I'm rollin' through my ends, though
+
+                [Ty Dolla $ign]
+                The AP goin' psycho, my Rollie goin' brazy
+                I'm hittin' lil' mama, she wanna have my babies
+                It's fifty on the pinky, chain so stanky
+                You should see the whip, promise I can take yo' bitch
+                Dolla ridin' in an old school Chevy, it's a drop top
+                Boolin' with a thot-thot, she gon' give me top-top
+                Just one switch, I can make the ass drop
+                Ayy, take you to the smoke shop
+                We gon' get high, ayy, we gon' hit Rodeo
+                Dial up Valentino, we gon' hit Pico
+                Take you where I'm from, take you to the slums
+                This ain't happen overnight, no, these diamonds real bright
+                Saint Laurent jeans, still in my Vans though
+                All VVS', put you in a necklace
+                Girl, you look beautiful tonight
+                Stars on the roof, they matching with the jewelry
+
+                [Post Malone]
+                Damn, my AP goin' psycho, lil' mama bad like Michael
+                Can't really trust nobody with all this jewelry on you
+                My roof look like a no-show, got diamonds by the boatload
+                Come with the Tony Romo for clowns and all the bozos
+                My AP goin' psycho, lil' mama bad like Michael
+                Can't really trust nobody with all this jewelry on you
+                My roof look like a no-show, got diamonds by the boatload
+                Don't act like you my friend when I'm rollin' through my ends, though
+            </lyrics>
             <MP3File>Canciones/Psycho (feat. Ty Dolla Sign).wav</MP3File>
         </Song>
 
         <Song>
-            <name>Stuck with me</name>
-            <gender>Song</gender>
-            <artist>Song</artist>
-            <album>Song</album>
-            <year>Song</year>
-            <lyrics>Song</lyrics>
+            <name>Stuck With Me</name>
+            <genre>Electropop/Dance pop</genre>
+            <artist>The Neighbourhood</artist>
+            <album>The Neighbourhood</album>
+            <year>2018</year>
+            <lyrics>
+                Now I'm feeling guilty for it
+                Didn't wanna leave
+                I got caught up in the forest
+                Hangin' with the trees
+                Realised I'm less important
+                Than I thought I'd be
+                I'm not tellin' you for any certain reason but
+                Now I'm feelin' guilty for it
+                I didn't wanna leave, no
+                I got caught up in the forest
+                Hangin' with the trees, yeah, yeah
+                Realized I'm less important (oh, yeah)
+                Than I thought I'd be, yeah
+                I'm not tellin' you for any certain reasons but
+                I just want your empathy
+                Our lives keep on gettin' shorter
+                Losin' opportunity
+                There might be some other ways of looking at it but
+                That's just what I see
+                I been gettin' over myself
+                Thinkin' about what you need
+                Then I realised that neither of us matter
+                What's reality, yeah?
+                You are stuck with me
+                So I guess I'll be sticking with
+                You are stuck with me
+                So I guess I'll be sticking with you
+                Couldn't be more different than me
+                So each time we agree
+                I feel fulfilled
+                You always end up stickin' to me
+                Somehow, somehow
+                You are stuck with me
+                So I guess I'll be sticking with
+                You are stuck with me
+                So I guess I'll be sticking with
+                You are stuck with me
+                So I guess I'll be sticking with
+                You are stuck with me
+                So I guess I'll be sticking with
+                You are stuck with me
+                So I guess I'll be sticking with
+                You are stuck with me
+                So I guess I'll be sticking with
+                You are stuck with me
+                So I guess I'll be sticking with
+                You are stuck with me
+                So I guess I'll be sticking with
+                You are stuck with me
+                So I guess I'll be sticking with
+                You are stuck with me
+            </lyrics>
             <MP3File>Canciones/Stuck with me.wav</MP3File>
         </Song>
 
         <Song>
             <name>The Spins</name>
-            <gender>Song</gender>
-            <artist>Song</artist>
-            <album>Song</album>
-            <year>Song</year>
-            <lyrics>Song</lyrics>
+            <genre>Hip-hop/Rap</genre>
+            <artist>Mac Miller</artist>
+            <album>K.I.D.S</album>
+            <year>2010</year>
+            <lyrics>
+                Dope shit like that Jerm
+                Oh hi
+                Welcome back to K.I.D.S
+                Umm, follow your dreams
+                Yeah!
+                Wanna get a mansion
+                A jacuzzi, a theater to watch my movies
+                A couple whips and lots of fancy things
+                The kids they call the Goonies
+                I see the future, crystal ball
+                Mirror, mirror hangin' on the wall
+                Who the flyest white boy of them dem all?
+                Got your girlfriend screenin' all the calls
+                She bubblin', we fuckin' then you cuddlin'
+                Like baby where the fuck you been?
+                Don't wanna tell you she in love with him
+                So, so, we ain't sayin' nothing
+                You could probably tell she bluffin'
+                'Cause she kiss you with the mouth
+                She gave me head with my concussion
+                Yeah she blushin', all red
+                Wanna rush and go to bed
+                You interrogate that bitch like you the feds
+                So she says
+                She in love with a rock star, rock star
+                Wanna smoke my weed
+                So she asks me where the tops are, tops are
+                Oh, oh, oh (top drawer, haha, yeah)
+                Honey, I need you 'round (haha)
+                I know, I know (just some motherfuckin' kids)
+                Oh, oh, oh
+                Honey, I need you 'round (make money, fuck bitches)
+                I know, I know (yeah, Pittsburgh, hey, Jerm, hey)
+                These hoes is drunk, wanna come and smoke this blunt
+                Then let me take 'em home and do anything I want
+                I said, "Baby, I can ride you, just let me get inside you
+                I can take you higher if you hit this vaporizer"
+                I got that dope dick, I'll be your supplier
+                You grabbin' on my sheets and hittin' notes like you Mariah
+                Obsessed with me
+                Undress a freak on ecstasy
+                I'm out and then she textin' me
+                Like, "What you doin' next week, next week?" (yeah)
+                Hear me now!
+                I'm down on knees and praying
+                Though my faith is weak
+                Without you so please baby please
+                Give us a chance
+                Make amends and I will stand up 'til the end
+                A million times, a trillion more
+                Oh, oh, oh
+                Honey, I need you 'round (I'm drunk as fuck)
+                I know, I know (most Dope, bitch, hey)
+                Oh, oh, oh (K.I.D.S., what's up?)
+                Honey, I need you 'round (I'm high as fuck, yeah, yes, sir)
+                I know, I know (oh, I graduated, oh yeah, I just graduated high school, haha)
+                Hey, homie
+                Don't be mad that your girl loves me (don't cut anything yet)
+                It's not my fault (yeah)
+                I'm just doin' me (haha)
+                If your girl love me, let her love me, you feel me?
+                So, baby smile (uh-huh)
+                Baby, don't cry
+                I will only fly
+                With you by my side
+            </lyrics>
             <MP3File>Canciones/The Spins.wav</MP3File>
         </Song>
 </Songs>
