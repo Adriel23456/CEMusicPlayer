@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9346a45e-ccbf-4d30-bb14-f8ecaf000672" name="Changes" comment="Version 1.2.1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Data/XmlPersister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Canciones.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Canciones.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/DoubleCircledLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/DoubleCircledLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/Controller_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/Controller_Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/View_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/View_Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/Controller_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/Controller_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/Model_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/Model_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Playlist.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Playlist.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/CEMusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Principales/CEMusicPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_Principales/Song.java" afterDir="false" />
-    </list>
+    <list default="true" id="9346a45e-ccbf-4d30-bb14-f8ecaf000672" name="Changes" comment="Version 1.3" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +80,7 @@
       <workItem from="1663690071355" duration="15204000" />
       <workItem from="1663709824433" duration="126000" />
       <workItem from="1663719395700" duration="6217000" />
-      <workItem from="1663729746141" duration="12638000" />
+      <workItem from="1663729746141" duration="13045000" />
     </task>
     <task id="LOCAL-00001" summary="El principio del fin">
       <created>1663564879675</created>
@@ -173,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663725568019</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Version 1.3">
+      <created>1663742406320</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1663742406320</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +192,8 @@
     <MESSAGE value="Primer Version 1.0" />
     <MESSAGE value="Version 1.1" />
     <MESSAGE value="Version 1.2.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.2.1" />
+    <MESSAGE value="Version 1.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
