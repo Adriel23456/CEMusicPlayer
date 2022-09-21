@@ -37,7 +37,7 @@ public class DoubleCircledLinkedList<T>{
      * Este método nos permite añadir un valor al final de la lista circular.
      * @param data Se establece que requiere de una información "T" para añadirla a la lista actual.
      */
-    public void add(T data){
+    public void addCircled(T data){
         //En el caso que la lista este vacía, generara un nuevo Nodo y lo establecerá como el primero:
         if(isEmpty()){
             this.head = new Node<T>(this.head, this.head, data);

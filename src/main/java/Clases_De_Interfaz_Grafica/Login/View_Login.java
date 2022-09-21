@@ -31,20 +31,20 @@ public class View_Login implements Observer {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                /**
-                 * Intento para establecer el funcionamiento de la música
-                 */
-                if (reproduccion[0] == Boolean.TRUE){
-                    String filepath = "Canciones/As it was.wav";
-                    Sound.playMusic(filepath);
-                    reproduccion[0] = Boolean.FALSE;
-                }
+                //if (reproduccion[0] == Boolean.TRUE){
+                //    String filepath = "Canciones/As it was.wav";
+                //    Sound.playMusic(filepath);
+                //    reproduccion[0] = Boolean.FALSE;
+                //}
 
                 if (validate2() == false){
                     JOptionPane.showMessageDialog(panel, "Favor complete todos los datos", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }
                 if (validate2() == true && (controller.loginUser() == false)){
                     JOptionPane.showMessageDialog(panel, "Usuario no existe", "ERROR", JOptionPane.ERROR_MESSAGE);
+                }
+                else{
+                    Controller_Login.cambio_a_playlist();
                 }
             }
         });
@@ -53,11 +53,11 @@ public class View_Login implements Observer {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                if (reproduccion[0] == Boolean.FALSE){
-                    String filepath = "Canciones/As it was.wav";
-                    Sound.pauseMusic();
-                    reproduccion[0] = Boolean.TRUE;
-                }
+                //if (reproduccion[0] == Boolean.FALSE){
+                //    String filepath = "Canciones/As it was.wav";
+                //    Sound.pauseMusic();
+                //    reproduccion[0] = Boolean.TRUE;
+                //}
 
                 if (validate() == false){
                     JOptionPane.showMessageDialog(panel, "Favor complete todos los datos", "ERROR", JOptionPane.ERROR_MESSAGE);

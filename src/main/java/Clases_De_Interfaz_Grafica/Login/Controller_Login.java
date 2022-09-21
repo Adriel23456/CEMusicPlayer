@@ -5,6 +5,8 @@ import Clases_Principales.Login;
 import Clases_Principales.Song;
 import Clases_Principales.User;
 
+import javax.swing.*;
+
 /**
  * Se genera a la clase de Controller_login para establecer todos los métodos que necesitara, estos métodos reciben atributos de la clase view_login
  */
@@ -38,10 +40,18 @@ public class Controller_Login {
         return CEMusicPlayer.instance().addUser(user);
     }
 
+    /**
+     * Se crea un método para autenticar a un usuario
+     * @return retorna un metodo en la clase de Login, para preguntarle a la lista principal de usuarios si existe el usuario
+     */
     public boolean loginUser(){
         String correo_iniciar_sesion = view.getCorreo_iniciosesion().getText().toString();
         String contraseña_iniciar_sesion = view.getContraseña_iniciosesion().getText().toString();
         return Login.instance().loginExistingUser(correo_iniciar_sesion, contraseña_iniciar_sesion);
+    }
+
+    public static void cambio_a_playlist(){
+        //window.remove(view_playlist.getPanel())
     }
 
 

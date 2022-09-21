@@ -1,26 +1,23 @@
 package Clases_Principales;
 
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+
+import java.lang.reflect.Array;
+
 /**
  * Esta es la clase lógica para la creación de las listas de canciones de la aplicación, y, esta establecerá todos los métodos necesarios para que el controlador de la ventana "Songs"
  * @author Adriel
  */
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Song {
     private String name;
-    private String gender;
+    private String genre;
     private String artist;
     private String album;
     private String year;
     private String lyrics;
     private String MP3File;
-
-    private static Song instance;
-
-    public static Song instance(){
-        if (instance == null ){
-            instance = new Song();
-        }
-        return instance;
-    }
 
 
     /**
@@ -35,7 +32,7 @@ public class Song {
      */
     public Song(String name, String gender, String artist, String album, String year, String lyrics, String MP3File) {
         this.name = name;
-        this.gender = gender;
+        this.genre = gender;
         this.artist = artist;
         this.album = album;
         this.year = year;
@@ -48,12 +45,41 @@ public class Song {
      */
     public Song() {
         this.name = "";
-        this.gender = "";
+        this.genre = "";
         this.artist = "";
         this.album = "";
         this.year = "";
         this.lyrics = "";
         this.MP3File = "";
+    }
+
+    public static void addSong(String[] array){
+        Song song = new Song();
+        for(int i = 0;i < array.length; i++){
+            if (i == 0){
+                song.name = array[0];
+            }
+            if (i == 1){
+                song.genre = array[1];
+            }
+            if (i == 2){
+                song.artist = array[2];
+            }
+            if (i == 3){
+                song.album = array[3];
+            }
+            if (i == 4){
+                song.year = array[4];
+            }
+            if (i == 5){
+                song.lyrics = array[5];
+            }
+            if (i == 6){
+                song.MP3File = array[6];
+            }
+        }
+        //System.out.println(song.toString());
+        CEMusicPlayer.addSong(song);
     }
 
     /**
@@ -64,12 +90,12 @@ public class Song {
     public String toString() {
         return "Song{" +
                 "name='" + name + '\'' +
-                ", gender='" + gender + '\'' +
+                ", gender='" + genre + '\'' +
                 ", artist='" + artist + '\'' +
                 ", album='" + album + '\'' +
                 ", year=" + year +
                 ", lyrics='" + lyrics + '\'' +
-                '}';
+                ", MP3File='"+ MP3File + '}';
     }
 
     public Song registerNewSong(String[] array){
@@ -79,8 +105,8 @@ public class Song {
 
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
-    public String getGender() {return gender;}
-    public void setGender(String gender) {this.gender = gender;}
+    public String getGender() {return genre;}
+    public void setGender(String gender) {this.genre = genre;}
     public String getArtist() {return artist;}
     public void setArtist(String artist) {this.artist = artist;}
     public String getAlbum() {return album;}

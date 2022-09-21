@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<data>
 <Songs>
         <Song>
         <name>As it was</name>
@@ -379,3 +380,4 @@
             <MP3File>Canciones/The Spins.wav</MP3File>
         </Song>
 </Songs>
+</data>

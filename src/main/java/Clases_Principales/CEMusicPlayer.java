@@ -2,6 +2,9 @@ package Clases_Principales;
 
 import Clases_De_Estructuras_De_Datos.DoubleCircledLinkedList;
 import Clases_De_Estructuras_De_Datos.DoubleLinkedList;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlRootElement;
 
 import javax.swing.*;
 
@@ -9,6 +12,8 @@ import javax.swing.*;
  * Esta es la clase main y, va a relacionar el funcionamiento lógico de todas las otras clases principales e iniciar el programa llamando al controlador de la ventana Login.
  * @author Adriel
  */
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class CEMusicPlayer {
     private static DoubleCircledLinkedList<Song> songs;
     private static DoubleLinkedList<User> users;
@@ -44,6 +49,10 @@ public class CEMusicPlayer {
         users.add(user);
         JOptionPane.showMessageDialog(null,"Se agrego correctamente el nuevo usuario");
         return true;
+    }
+
+    public static void addSong(Song song){
+        songs.addCircled(song);
     }
 
 
