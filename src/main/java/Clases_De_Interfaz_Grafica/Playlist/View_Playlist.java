@@ -1,8 +1,5 @@
 package Clases_De_Interfaz_Grafica.Playlist;
 
-import Clases_De_Interfaz_Grafica.Login.Controller_Login;
-import Clases_De_Interfaz_Grafica.Login.Model_Login;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,6 +16,7 @@ public class View_Playlist implements Observer {
     private JTextField Biblioteca;
     private JTable Bibliotecas;
     private JPanel panel;
+    private JButton returnButton;
 
     public View_Playlist() {
         crearButton.addActionListener(new ActionListener() {
@@ -34,6 +32,12 @@ public class View_Playlist implements Observer {
             }
         });
         editarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        returnButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -74,6 +78,8 @@ public class View_Playlist implements Observer {
     public JTable getBibliotecas() {
         return Bibliotecas;
     }
+
+    public JButton getReturnButton() {return returnButton;}
 
     public JPanel getPanel() {
         return panel;

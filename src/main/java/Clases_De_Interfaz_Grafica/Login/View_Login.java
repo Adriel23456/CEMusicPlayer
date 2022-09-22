@@ -1,5 +1,4 @@
 package Clases_De_Interfaz_Grafica.Login;
-import Clases_Principales.Sound;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,18 +24,9 @@ public class View_Login implements Observer {
 
     public View_Login() {
 
-        final Boolean[] reproduccion = {Boolean.TRUE};
-
         iniciarsesionButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                //if (reproduccion[0] == Boolean.TRUE){
-                //    String filepath = "Canciones/As it was.wav";
-                //    Sound.playMusic(filepath);
-                //    reproduccion[0] = Boolean.FALSE;
-                //}
-
                 if (validate2() == false){
                     JOptionPane.showMessageDialog(panel, "Favor complete todos los datos", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }
@@ -52,13 +42,6 @@ public class View_Login implements Observer {
         registrateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                //if (reproduccion[0] == Boolean.FALSE){
-                //    String filepath = "Canciones/As it was.wav";
-                //    Sound.pauseMusic();
-                //    reproduccion[0] = Boolean.TRUE;
-                //}
-
                 if (validate() == false){
                     JOptionPane.showMessageDialog(panel, "Favor complete todos los datos", "ERROR", JOptionPane.ERROR_MESSAGE);
                     }
