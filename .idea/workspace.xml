@@ -4,33 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9346a45e-ccbf-4d30-bb14-f8ecaf000672" name="Changes" comment="Version 1.3">
+    <list default="true" id="9346a45e-ccbf-4d30-bb14-f8ecaf000672" name="Changes" comment="Version 1.4">
+      <change afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_Principales/Sound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/Controller_Add_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/Controller_Add_Songs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/Model_Add_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/Model_Add_Songs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/View_Add_Songs.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/View_Add_Songs.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/View_Add_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/View_Add_Songs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/Controller_Create_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/Controller_Create_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/Model_Create_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/Model_Create_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/View_Create_Playlist.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/View_Create_Playlist.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/View_Create_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/View_Create_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/Controller_Edit_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/Controller_Edit_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/Model_Edit_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/Model_Edit_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/View_Edit_Playlist.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/View_Edit_Playlist.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/View_Edit_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/View_Edit_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/Controller_Edit_Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/Controller_Edit_Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/Model_Edit_Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/Model_Edit_Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/View_Edit_Song.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/View_Edit_Song.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/View_Edit_Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/View_Edit_Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/View_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/View_Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/Controller_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/Controller_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Playlist.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Playlist.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/Controller_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/Controller_Songs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/Model_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/Model_Songs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/View_Songs.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/View_Songs.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/View_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/View_Songs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/DoubleCircledLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Estructuras_De_Datos/DoubleCircledLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/DoubleLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Estructuras_De_Datos/DoubleLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Estructuras_De_Datos/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Estructuras_De_Datos/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/Controller_Add_Songs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/Model_Add_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Add_Songs/Model_Add_Songs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/View_Add_Songs.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Add_Songs/View_Add_Songs.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Add_Songs/View_Add_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Add_Songs/View_Add_Songs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/Controller_Create_Playlist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/Model_Create_Playlist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/View_Create_Playlist.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Create_Playlist/View_Create_Playlist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/Controller_Edit_Playlist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/Model_Edit_Playlist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/View_Edit_Playlist.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Playlist/View_Edit_Playlist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/Controller_Edit_Song.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/Model_Edit_Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Edit_Song/Model_Edit_Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/View_Edit_Song.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Edit_Song/View_Edit_Song.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Edit_Song/View_Edit_Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Edit_Song/View_Edit_Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/Controller_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Login/Controller_Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/Model_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Login/Model_Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/View_Login.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Login/View_Login.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Login/View_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Login/View_Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/Controller_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Playlist/Controller_Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/Model_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Playlist/Model_Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Playlist.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Playlist/View_Playlist.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Playlist/View_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Playlist/View_Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/Controller_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Songs/Controller_Songs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/Model_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Songs/Model_Songs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/View_Songs.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Songs/View_Songs.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_De_Interfaz_Grafica/Songs/View_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_De_Interfaz_Grafica/Songs/View_Songs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/CEMusicPlayer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/Clip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_Principales/Clip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_Principales/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/Playlist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/Service.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_Principales/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/Sound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Clases_Principales/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Clases_Principales/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Data/XmlPersister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CEMUSICPLAYER/Data/XmlPersister.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +125,8 @@
       <workItem from="1663709824433" duration="126000" />
       <workItem from="1663719395700" duration="6217000" />
       <workItem from="1663729746141" duration="13045000" />
-      <workItem from="1663804452268" duration="4342000" />
+      <workItem from="1663804452268" duration="14418000" />
+      <workItem from="1663821702255" duration="4254000" />
     </task>
     <task id="LOCAL-00001" summary="El principio del fin">
       <created>1663564879675</created>
@@ -201,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663804470713</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Version 1.4">
+      <created>1663808854212</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1663808854212</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +253,8 @@
     <MESSAGE value="Version 1.1" />
     <MESSAGE value="Version 1.2.1" />
     <MESSAGE value="Version 1.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.3" />
+    <MESSAGE value="Version 1.4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.4" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
