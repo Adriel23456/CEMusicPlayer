@@ -1,5 +1,4 @@
 package CE;
-
 import CE.Interfaz_Grafica.Add_Songs.Controller_Add_Songs;
 import CE.Interfaz_Grafica.Add_Songs.Model_Add_Songs;
 import CE.Interfaz_Grafica.Add_Songs.View_Add_Songs;
@@ -22,7 +21,6 @@ import CE.Interfaz_Grafica.Songs.Controller_Songs;
 import CE.Interfaz_Grafica.Songs.Model_Songs;
 import CE.Interfaz_Grafica.Songs.View_Songs;
 import CE.Clases_Principales.Sound;
-
 import javax.sound.sampled.LineUnavailableException;
 import javax.swing.*;
 import java.io.*;
@@ -107,9 +105,9 @@ public class Application {
         window = new JFrame();
         panel = new JPanel();
         window.add(panel);
-        window.setSize(650,550);
+        window.setSize(950,750);
         panel.setSize(650,550);
-        window.setLocation(625,220);
+        window.setLocation(500,140);
         window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         window.setTitle("CE Music Player - Adriel Chaves");
         window.setVisible(true);
@@ -118,7 +116,7 @@ public class Application {
         //panel.add(view_login.getPanel());
 
         //Ventana bibliotecas
-        panel.add(view_playlist.getPanel());
+        //panel.add(view_playlist.getPanel());
 
 
         //Ventana crear biblioteca
@@ -128,7 +126,7 @@ public class Application {
         //window.add(view_edit_playlist.getPanel());
 
         //Ventana songs (selección de canción por biblioteca)
-        //window.add(view_songs.getPanel());
+        panel.add(view_songs.getPanel());
 
         //Ventana Añadir Canciones a la biblioteca seleccionada
         //window.add(view_add_songs.getPanel());
@@ -139,9 +137,5 @@ public class Application {
         window.show();
 
         musicObject = new Sound();
-
-        if (Sound.loop == 1 && Sound.clip.getMicrosecondLength() == Sound.clip.getMicrosecondPosition()){
-            Sound.playMusic();
-        }
     }
 }

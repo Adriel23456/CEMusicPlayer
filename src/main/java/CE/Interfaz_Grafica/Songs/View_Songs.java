@@ -9,6 +9,11 @@ import java.util.Observable;
 import java.util.Observer;
 
 public class View_Songs implements Observer {
+    public static final Boolean[] reproduccion = {Boolean.TRUE};
+    public static final Boolean[] reproduccion2 = {Boolean.TRUE};
+    public static final Boolean[] Allowvolume = {Boolean.FALSE};
+
+    public static final Boolean[] cancionUNO = {Boolean.FALSE};
     private Controller_Songs controller;
     private Model_Songs model;
     private JLabel Nombre_Biblioteca;
@@ -31,10 +36,6 @@ public class View_Songs implements Observer {
     private String cancionFavorita = "OFF";
 
     public View_Songs() {
-
-        final Boolean[] reproduccion = {Boolean.TRUE};
-
-        final Boolean[] Allowvolume = {Boolean.FALSE};
 
 
         agregarButton.addActionListener(new ActionListener() {
@@ -64,39 +65,61 @@ public class View_Songs implements Observer {
         reproducirButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (reproduccion[0] == Boolean.TRUE){
-                    Sound.setFile("Canciones/As it was.wav");
-                    Sound.playMusic();
-                    reproduccion[0] = Boolean.FALSE;
-                    Allowvolume[0] = Boolean.TRUE;
+                if (reproduccion[0] == Boolean.FALSE){
+                    Sound.stopMusic();
                 }
+                Sound.setFile("Canciones/As it was.wav");
+                Sound.setFile2("Canciones/MIRÁ MAMÁ.wav");
+                try {
+                    Sound.playMusic();
+                } catch (InterruptedException ex) {
+                    throw new RuntimeException(ex);
+                }
+                Allowvolume[0] = Boolean.TRUE;
+                cancionUNO[0] = Boolean.TRUE;
+                reproduccion[0] = Boolean.FALSE;
+                reproduccion2[0] = Boolean.FALSE;
             }
         });
         pausarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (reproduccion[0] == Boolean.FALSE){
-                    Sound.pauseMusic();
                     reproduccion[0] = Boolean.TRUE;
+                    Sound.pauseMusic();
                 }
             }
         });
         anteriorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Sound.stopMusic();
-                Sound.setFile("Canciones/Latch.wav");
-                Sound.playMusic();
-                reproduccion[0] = Boolean.FALSE;
+                if (cancionUNO[0] == Boolean.TRUE){
+                    reproduccion2[0] = Boolean.TRUE;
+                    Sound.stopMusic();
+                    Sound.setFile("Canciones/Latch.wav");
+                    try {
+                        Sound.playMusic();
+                    } catch (InterruptedException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    reproduccion[0] = Boolean.FALSE;
+                }
             }
         });
         siguienteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Sound.stopMusic();
-                Sound.setFile("Canciones/The Spins.wav");
-                Sound.playMusic();
-                reproduccion[0] = Boolean.FALSE;
+                if (cancionUNO[0] == Boolean.TRUE){
+                    reproduccion2[0] = Boolean.TRUE;
+                    Sound.stopMusic();
+                    Sound.setFile("Canciones/The Spins.wav");
+                    try {
+                        Sound.playMusic();
+                    } catch (InterruptedException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                    reproduccion[0] = Boolean.FALSE;
+                }
             }
         });
         masButton.addActionListener(new ActionListener() {
@@ -124,7 +147,6 @@ public class View_Songs implements Observer {
         returnButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Sound.volumeDown();
             }
         });
 
@@ -138,11 +160,13 @@ public class View_Songs implements Observer {
                     reproduccionConstante = "OFF";
                 }
                 if (reproduccionConstante == "OFF"){
-                    System.out.println("NOLOOPMUSIC");
-                    Sound.NOloopMusic();
+                    if (cancionUNO[0] == Boolean.TRUE){
+                        Sound.NOloopMusic();
+                    }
                 } else if (reproduccionConstante == "ON") {
-                    System.out.println("LOOPMUSIC");
-                    Sound.loopMusic();
+                    if (cancionUNO[0] == Boolean.TRUE){
+                        Sound.loopMusic();
+                    }
                 }
             }
         });

@@ -11,7 +11,6 @@ public class Controller_Playlist {
         view.setController(this);
         view.setModel(model);
     }
-
     public static void inicializacion(){
         return;
         //TODA LA LOGICA DE LA APERTURA DEL POP UP
