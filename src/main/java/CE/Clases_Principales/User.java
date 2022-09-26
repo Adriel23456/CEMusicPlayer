@@ -14,7 +14,18 @@ public class User {
     private String password;
 
     /**
-     * Contructór de los usuarios
+     * Constructor de los usuarios para la primera vez que se llama a la funcion
+     */
+    public User() {
+        playlists = new DoubleLinkedList<>();
+        name = "";
+        this.email = "";
+        this.province = "";
+        this.password = "";
+    }
+
+    /**
+     * Constructor de los usuarios para cuando se vuelve a llamar
      * @param playlists
      * @param name
      * @param email

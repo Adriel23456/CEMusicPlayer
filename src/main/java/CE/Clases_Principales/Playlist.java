@@ -9,15 +9,17 @@ import CE.Clases_De_Estructuras_De_Datos.DoubleCircledLinkedList;
 public class Playlist {
     private DoubleCircledLinkedList<Song> songs;
     private String name;
+    private String fecha;
 
     /**
      * Se establece el constructor de esta clase
      * @param songs Se establece que cada playlist (biblioteca), debera de tener una lista circular de canciones
      * @param name Se establece que cada playlist (biblioteca), debera de tener un nombre único
      */
-    public Playlist(DoubleCircledLinkedList<Song> songs, String name) {
+    public Playlist(DoubleCircledLinkedList<Song> songs, String name, String fecha) {
         this.songs = songs;
         this.name = name;
+        this.fecha = fecha;
     }
 
     /**
@@ -26,13 +28,12 @@ public class Playlist {
      */
     @Override
     public String toString() {
-        return ("Song{"+"name='"+name+'\''+", playlist='"+songs+'\''+'}');
-    }
+        return ("Song{"+"name='"+name+'\''+", playlist='"+songs+'\''+", fecha="+fecha+"}");}
 
     public DoubleCircledLinkedList<Song> getSongs() {return songs;}
     public void setSongs(DoubleCircledLinkedList<Song> songs) {this.songs = songs;}
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
-
-
+    public String getFecha() {return fecha;}
+    public void setFecha(String fecha) {this.fecha = fecha;}
 }

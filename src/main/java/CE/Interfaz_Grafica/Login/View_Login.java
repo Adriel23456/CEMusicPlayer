@@ -1,5 +1,9 @@
 package CE.Interfaz_Grafica.Login;
+import CE.Application;
+import CE.Clases_Principales.User;
+
 import javax.swing.*;
+import java.awt.desktop.AppForegroundListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Observable;
@@ -23,7 +27,6 @@ public class View_Login implements Observer {
     private JPanel panel;
 
     public View_Login() {
-
         iniciarsesionButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -33,8 +36,9 @@ public class View_Login implements Observer {
                 if (validate2() == true && (controller.loginUser() == false)){
                     JOptionPane.showMessageDialog(panel, "Usuario no existe", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }
-                else{
-                    Controller_Login.cambio_a_playlist();
+                if (validate2() == true && (controller.loginUser() == true)){
+                    JOptionPane.showMessageDialog(null,"Inicio de Sesión Correcto");
+                    controller.hide();
                 }
             }
         });
@@ -78,8 +82,13 @@ public class View_Login implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
+        getContraseña_iniciosesion().setText("");
+        getUsuario().setText("");
+        getCorreo().setText("");
     }
-    public void setController(Controller_Login controller) {this.controller = controller;}
+    public void setController(Controller_Login controller) {
+        this.controller = controller;
+    }
 
     public void setModel(Model_Login model) {
         this.model = model;

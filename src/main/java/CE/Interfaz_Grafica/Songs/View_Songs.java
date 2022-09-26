@@ -11,7 +11,9 @@ import java.util.Observer;
 public class View_Songs implements Observer {
     public static final Boolean[] reproduccion = {Boolean.TRUE};
     public static final Boolean[] reproduccion2 = {Boolean.TRUE};
+    public static final Boolean[] reproduccion3 = {Boolean.FALSE};
     public static final Boolean[] Allowvolume = {Boolean.FALSE};
+    public static final Boolean[] playMusic1 = {Boolean.TRUE};
 
     public static final Boolean[] cancionUNO = {Boolean.FALSE};
     private Controller_Songs controller;
@@ -35,13 +37,21 @@ public class View_Songs implements Observer {
     private String reproduccionConstante = "OFF";
     private String cancionFavorita = "OFF";
 
+    public void Add_Song(){
+        controller.add_song();
+    }
+
+    public void Edit_Song(){
+        controller.edit_song();
+    }
+
     public View_Songs() {
 
 
         agregarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Add_Song();
             }
         });
         eliminarButton.addActionListener(new ActionListener() {
@@ -53,7 +63,7 @@ public class View_Songs implements Observer {
         editarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Edit_Song();
             }
         });
         cancionFavoritaCheckBox.addActionListener(new ActionListener() {
@@ -66,12 +76,22 @@ public class View_Songs implements Observer {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (reproduccion[0] == Boolean.FALSE){
+                    reproduccion3[0] = Boolean.TRUE;
                     Sound.stopMusic();
                 }
-                Sound.setFile("Canciones/As it was.wav");
-                Sound.setFile2("Canciones/MIRÁ MAMÁ.wav");
                 try {
-                    Sound.playMusic();
+                    if (playMusic1[0] == Boolean.TRUE){
+                        //SE DEBE SELECCIONAR LA CANCION QUE LE DIMOS CLICK EN LA PARTE DE LA TABLA, TANTO COMO PARA SETFILE COMO PARA SETFILE 2
+                        Sound.setFile("Canciones/As it was.wav");
+                        reproduccion3[0] = Boolean.FALSE;
+                        Sound.playMusic();
+                    }
+                    else{
+                        //SE DEBE SELECCIONAR LA CANCION QUE LE DIMOS CLICK EN LA PARTE DE LA TABLA, TANTO COMO PARA SETFILE COMO PARA SETFILE 2
+                        Sound.setFile2("Canciones/MIRÁ MAMÁ.wav");
+                        reproduccion3[0] = Boolean.FALSE;
+                        Sound.playMusic2();
+                    }
                 } catch (InterruptedException ex) {
                     throw new RuntimeException(ex);
                 }
@@ -96,9 +116,17 @@ public class View_Songs implements Observer {
                 if (cancionUNO[0] == Boolean.TRUE){
                     reproduccion2[0] = Boolean.TRUE;
                     Sound.stopMusic();
-                    Sound.setFile("Canciones/Latch.wav");
                     try {
-                        Sound.playMusic();
+                        if (playMusic1[0] == Boolean.TRUE){
+                            reproduccion2[0] = Boolean.FALSE;
+                            Sound.setFile("Canciones/Latch.wav");
+                            Sound.playMusic();
+                        }
+                        else{
+                            Sound.setFile2("Canciones/Latch.wav");
+                            reproduccion2[0] = Boolean.FALSE;
+                            Sound.playMusic2();
+                        }
                     } catch (InterruptedException ex) {
                         throw new RuntimeException(ex);
                     }
@@ -112,9 +140,17 @@ public class View_Songs implements Observer {
                 if (cancionUNO[0] == Boolean.TRUE){
                     reproduccion2[0] = Boolean.TRUE;
                     Sound.stopMusic();
-                    Sound.setFile("Canciones/The Spins.wav");
                     try {
-                        Sound.playMusic();
+                        if (playMusic1[0] == Boolean.TRUE){
+                            reproduccion2[0] = Boolean.FALSE;
+                            Sound.setFile("Canciones/The Spins.wav");
+                            Sound.playMusic();
+                        }
+                        else{
+                            reproduccion2[0] = Boolean.FALSE;
+                            Sound.setFile2("Canciones/The Spins.wav");
+                            Sound.playMusic2();
+                        }
                     } catch (InterruptedException ex) {
                         throw new RuntimeException(ex);
                     }
@@ -142,11 +178,6 @@ public class View_Songs implements Observer {
                 else{
                     System.out.println("No se ha seleccionado una canción aun");
                 }
-            }
-        });
-        returnButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
             }
         });
 

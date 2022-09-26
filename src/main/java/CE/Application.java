@@ -21,6 +21,10 @@ import CE.Interfaz_Grafica.Songs.Controller_Songs;
 import CE.Interfaz_Grafica.Songs.Model_Songs;
 import CE.Interfaz_Grafica.Songs.View_Songs;
 import CE.Clases_Principales.Sound;
+import CE.Interfaz_Grafica.Tabbedpane.Controller_Tabbedpane;
+import CE.Interfaz_Grafica.Tabbedpane.Model_Tabbedpane;
+import CE.Interfaz_Grafica.Tabbedpane.View_Tabbedpane;
+
 import javax.sound.sampled.LineUnavailableException;
 import javax.swing.*;
 import java.io.*;
@@ -34,9 +38,6 @@ public class Application {
      * Se establecen los atributos de los controllers de todas las ventanas, fuera del método main para llamarlos en cualquier situación
      */
     public static JFrame window;
-
-    public static JPanel panel;
-    public static String logeado;
     public static Controller_Login login_controller;
     public static Controller_Playlist playlist_controller;
     public static Controller_Create_Playlist create_playlist_controller;
@@ -44,8 +45,7 @@ public class Application {
     public static Controller_Songs songs_controller;
     public static Controller_Add_Songs add_songs_controller;
     public static Controller_Edit_Song edit_song_controller;
-
-
+    public static Controller_Tabbedpane mainController;
     public static Sound musicObject;
 
     static Scanner scanner = new Scanner(System.in);   //Scanner object to read user input
@@ -57,6 +57,12 @@ public class Application {
      * @throws java.io.IOException
      */
     public static void main(String[] args) throws IOException, LineUnavailableException {
+
+        window = new JFrame();
+        window.setSize(850,600);
+        window.setLocation(500,140);
+        window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        window.setTitle("CE Music Player - Adriel Chaves");
 
         /**
          * Se establece el desarrollo de la ventana autenticación
@@ -100,41 +106,28 @@ public class Application {
         Model_Edit_Song model_edit_song = new Model_Edit_Song();
         View_Edit_Song view_edit_song = new View_Edit_Song();
         edit_song_controller = new Controller_Edit_Song(view_edit_song,model_edit_song);
+        /**
+        * Se establece el desarrollo de la ventana Tabbed-pane
+        */
+        Model_Tabbedpane mainModel  = new Model_Tabbedpane();
+        View_Tabbedpane mainView = new View_Tabbedpane();
+        mainController = new Controller_Tabbedpane(mainView, mainModel);
 
+        mainView.getTabbedPane().add("Bibliotecas", view_playlist.getPanel());
+        mainView.getTabbedPane().add("Canciones",view_songs.getPanel());
 
-        window = new JFrame();
-        panel = new JPanel();
-        window.add(panel);
-        window.setSize(950,750);
-        panel.setSize(650,550);
-        window.setLocation(500,140);
-        window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        window.setTitle("CE Music Player - Adriel Chaves");
         window.setVisible(true);
-
-        //Ventana autenticación
-        //panel.add(view_login.getPanel());
-
-        //Ventana bibliotecas
-        //panel.add(view_playlist.getPanel());
-
-
-        //Ventana crear biblioteca
-        //window.add(view_create_playlist.getPanel());
-
-        //Ventana editar biblioteca
-        //window.add(view_edit_playlist.getPanel());
+        mainController.show();
+        Application.playlist_controller.getView().Log_out();
 
         //Ventana songs (selección de canción por biblioteca)
-        panel.add(view_songs.getPanel());
+        //panel.add(view_songs.getPanel());
 
         //Ventana Añadir Canciones a la biblioteca seleccionada
         //window.add(view_add_songs.getPanel());
 
         //Ventana Editar Metadata de la Canción seleccionada
         //window.add(view_edit_song.getPanel());
-
-        window.show();
 
         musicObject = new Sound();
     }

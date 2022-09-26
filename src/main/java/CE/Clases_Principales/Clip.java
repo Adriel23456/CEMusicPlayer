@@ -10,7 +10,6 @@ public class Clip implements javax.sound.sampled.Clip {
 
     @Override
     public void open(AudioInputStream stream) throws LineUnavailableException, IOException {
-
     }
 
     @Override
@@ -25,42 +24,34 @@ public class Clip implements javax.sound.sampled.Clip {
 
     @Override
     public void setFramePosition(int frames) {
-
     }
 
     @Override
     public void setMicrosecondPosition(long microseconds) {
-
     }
 
     @Override
     public void setLoopPoints(int start, int end) {
-
     }
 
     @Override
     public void loop(int count) {
-
     }
 
     @Override
     public void drain() {
-
     }
 
     @Override
     public void flush() {
-
     }
 
     @Override
     public void start() {
-
     }
 
     @Override
     public void stop() {
-
     }
 
     @Override
@@ -115,12 +106,10 @@ public class Clip implements javax.sound.sampled.Clip {
 
     @Override
     public void open() throws LineUnavailableException {
-
     }
 
     @Override
     public void close() {
-
     }
 
     @Override
@@ -145,12 +134,10 @@ public class Clip implements javax.sound.sampled.Clip {
 
     @Override
     public void addLineListener(LineListener listener) {
-
     }
 
     @Override
     public void removeLineListener(LineListener listener) {
-
     }
 
     public Clip() {

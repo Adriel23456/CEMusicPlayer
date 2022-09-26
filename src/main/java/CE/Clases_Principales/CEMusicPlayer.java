@@ -17,7 +17,6 @@ import javax.swing.*;
 public class CEMusicPlayer {
     private static DoubleCircledLinkedList<Song> songs;
     private static DoubleLinkedList<User> users;
-
     /**
      * Este es un atributo estático para establecer que CEMusicPlayer es una instancia.
      */
@@ -54,7 +53,6 @@ public class CEMusicPlayer {
     public static void addSong(Song song){
         songs.addCircled(song);
     }
-
 
     public DoubleCircledLinkedList<Song> getSongs() {return songs;}
     public void setSongs(DoubleCircledLinkedList<Song> songs) {this.songs = songs;}
