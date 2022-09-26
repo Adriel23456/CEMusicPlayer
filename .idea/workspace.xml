@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9346a45e-ccbf-4d30-bb14-f8ecaf000672" name="Changes" comment="Version 1.7">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="9346a45e-ccbf-4d30-bb14-f8ecaf000672" name="Changes" comment="Version 1.8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Clases_De_Estructuras_De_Datos/DoubleCircledLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Clases_De_Estructuras_De_Datos/DoubleCircledLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/CEMusicPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/CEMusicPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Login/Controller_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Login/Controller_Login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +99,8 @@
       <workItem from="1663977455951" duration="14291000" />
       <workItem from="1663992642076" duration="3595000" />
       <workItem from="1664006973840" duration="1587000" />
-      <workItem from="1664146606411" duration="10033000" />
+      <workItem from="1664146606411" duration="10050000" />
+      <workItem from="1664165121057" duration="605000" />
     </task>
     <task id="LOCAL-00001" summary="El principio del fin">
       <created>1663564879675</created>
@@ -229,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664150832998</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Version 1.8">
+      <created>1664157161044</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1664157161044</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +259,8 @@
     <MESSAGE value="Version 1.5" />
     <MESSAGE value="Version 1.6" />
     <MESSAGE value="Version 1.7" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.7" />
+    <MESSAGE value="Version 1.8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.8" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
