@@ -9,6 +9,15 @@ import javax.swing.*;
  * @author Adriel
  */
 public class Login {
+    private static Login instance;
+
+    public static Login instance(){
+        if (instance == null ){
+            instance = new Login();
+        }
+        return instance;
+    }
+
     /**
      * Este método nos permite registrar un nuevo usuario a la aplicación
      * @return Retorna un nuevo usuario
@@ -18,10 +27,10 @@ public class Login {
     }
 
     /**
-     * Este método nos permite preguntarnos si el correo y contraseña ingresados son los mismos
+     * Este método nos permite preguntarnos si el correo y contraseña ingresados son los mismos para la autenticacion
      * @param email El correo ingresado por el usuario
      * @param password La contraseña ingresada por el usuario
-     * @return Puede retornar que para la información ingresada de tal correo debera de estar relacionado a una contraseña, pero, si esto no es cierto, retorna falso.
+     * @return Puede retornar true si, la información ingresada de tal correo esta relacionada á una contraseña, pero, si esto no es cierto, retorna falso.
      */
     public boolean loginExistingUser(String email, String password){
         DoubleLinkedList<User> users = CEMusicPlayer.instance().getUsers();
@@ -33,14 +42,6 @@ public class Login {
             }
         }
         return false;
-    }
-    private static Login instance;
-
-    public static Login instance(){
-        if (instance == null ){
-            instance = new Login();
-        }
-        return instance;
     }
 }
 

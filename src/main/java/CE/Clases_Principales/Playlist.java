@@ -1,13 +1,14 @@
 package CE.Clases_Principales;
 
 import CE.Clases_De_Estructuras_De_Datos.DoubleCircledLinkedList;
+import CE.Clases_De_Estructuras_De_Datos.DoubleLinkedList;
 
 /**
  * Esta es la clase lógica de la ventana de "Playlist", y, esta establecerá todos los métodos y atributos necesarios para que el controlador de la ventana pueda trabajar correctamente
  * @author Adriel
  */
 public class Playlist {
-    private DoubleCircledLinkedList<Song> songs;
+    private DoubleCircledLinkedList<Song> songs_Playlist;
     private String name;
     private String fecha;
 
@@ -17,21 +18,14 @@ public class Playlist {
      * @param name Se establece que cada playlist (biblioteca), debera de tener un nombre único
      */
     public Playlist(DoubleCircledLinkedList<Song> songs, String name, String fecha) {
-        this.songs = songs;
+        this.songs_Playlist = songs;
         this.name = name;
         this.fecha = fecha;
     }
 
-    /**
-     * Se establece el método para escribir todos los valores de la lista playlist en strings e imprimirlos
-     * @return Esto retornará a todos los strings de la lista de canciones
-     */
-    @Override
-    public String toString() {
-        return ("Song{"+"name='"+name+'\''+", playlist='"+songs+'\''+", fecha="+fecha+"}");}
 
-    public DoubleCircledLinkedList<Song> getSongs() {return songs;}
-    public void setSongs(DoubleCircledLinkedList<Song> songs) {this.songs = songs;}
+    public DoubleCircledLinkedList<Song> getSongs() {return songs_Playlist;}
+    public void setSongs(DoubleCircledLinkedList<Song> songs) {this.songs_Playlist = songs;}
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
     public String getFecha() {return fecha;}

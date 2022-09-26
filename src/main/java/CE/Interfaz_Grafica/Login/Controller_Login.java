@@ -3,6 +3,7 @@ package CE.Interfaz_Grafica.Login;
 import CE.Application;
 import CE.Clases_Principales.CEMusicPlayer;
 import CE.Clases_Principales.Login;
+import CE.Clases_Principales.Service;
 import CE.Clases_Principales.User;
 
 import javax.swing.*;
@@ -52,7 +53,7 @@ public class Controller_Login {
                 view.getProvincia().getSelectedItem().toString(),
                 view.getContraseña().getText()
         });
-        return CEMusicPlayer.instance().addUser(user);
+        return Service.addUser(user);
     }
 
     /**

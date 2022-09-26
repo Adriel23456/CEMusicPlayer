@@ -1,5 +1,6 @@
 package CE.Clases_Principales;
 
+import CE.Clases_De_Estructuras_De_Datos.DoubleLinkedList;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 
@@ -51,35 +52,6 @@ public class Song {
         this.MP3File = "";
     }
 
-    public static void addSong(String[] array){
-        Song song = new Song();
-        for(int i = 0;i < array.length; i++){
-            if (i == 0){
-                song.name = array[0];
-            }
-            if (i == 1){
-                song.genre = array[1];
-            }
-            if (i == 2){
-                song.artist = array[2];
-            }
-            if (i == 3){
-                song.album = array[3];
-            }
-            if (i == 4){
-                song.year = array[4];
-            }
-            if (i == 5){
-                song.lyrics = array[5];
-            }
-            if (i == 6){
-                song.MP3File = array[6];
-            }
-        }
-        //System.out.println(song.toString());
-        CEMusicPlayer.addSong(song);
-    }
-
     /**
      * Se establece el método para escribir todos los valores de la lista song en strings e imprimirlos
      * @return Este método retorna los valores asignados a la instancia de una clase Song
@@ -96,15 +68,22 @@ public class Song {
                 ", MP3File='"+ MP3File + '}';
     }
 
-    public Song registerNewSong(String[] array){
-        return new Song(array[0], array[1], array[2], array[3], array[4], array [5], array [6]);
+    public void registerNewSong(String[] array){
+        Song song = new Song(array[0], array[1], array[2], array[3], array[4], array [5], array [6]);
+        Service.registerSong(song);
+    }
+
+    public void addSong_Playlist(String[] array){
+        //AQUÍ PUEDO ESTABLECER QUE EN VEZ DE RECIBIR UN ARRAY DE STRINGS, RECIBA DIRECTAMENTE EL OBJETO DE SONG SELECCIONADO
+        Song song = new Song(array[0], array[1], array[2], array[3], array[4], array [5], array [6]);
+        Service.addSong_Playlist(song);
     }
 
 
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}
-    public String getGender() {return genre;}
-    public void setGender(String gender) {this.genre = genre;}
+    public String getGenre() {return genre;}
+    public void setGenre(String genre) {this.genre = genre;}
     public String getArtist() {return artist;}
     public void setArtist(String artist) {this.artist = artist;}
     public String getAlbum() {return album;}

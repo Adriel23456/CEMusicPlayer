@@ -1,5 +1,7 @@
 package CE.Clases_De_Estructuras_De_Datos;
 
+import CE.Clases_Principales.Song;
+
 /**
  * Esta es la clase de lista doblemente enlazada circular, la cual, nos permitirá guardar las instancias de un objeto por posición en una lista, y, tener un movimiento continuo en esta.
  * @param <T>
@@ -81,6 +83,25 @@ public class DoubleCircledLinkedList<T>{
      * @return Este método puede retornar null si la posición indicada está fuera del rango, o, retorna la información del Nodo indicado en la lista actual.
      */
     public T getElement(int position){
+        if(this.numberOfElements > position){
+            Node<T> temporal = this.head;
+            //Aquí recorre la lista hasta que encuentre a la posición correcta y retorna la data "T" del Node
+            for (int i = 0; i < position; i++){
+                temporal = temporal.getNext();
+            }
+            return temporal.getData();
+        }
+        System.out.println("Index out of range");
+        return null;
+    }
+
+
+    /**
+     * Este método nos permite obtener un elemento utilizando la posición que le indiquemos al programa.
+     * @param position Se establece la posición en la lista que se desea buscar.
+     * @return Este método puede retornar null si la posición indicada está fuera del rango, o, retorna la información del Nodo indicado en la lista actual.
+     */
+    public T setElement_Song(int position){
         if(this.numberOfElements > position){
             Node<T> temporal = this.head;
             //Aquí recorre la lista hasta que encuentre a la posición correcta y retorna la data "T" del Node

@@ -35,25 +35,6 @@ public class CEMusicPlayer {
         return instance;
     }
 
-    /**
-     * Este es un método el cual recibe un usuario del controller_login y se pregunta si ya existe
-     * @param user
-     * @return Si no existe retorna true y lo agrega a la lista de usuarios
-     */
-    public static boolean addUser(User user){
-        for(int i = 0;i < users.getNumberOfElements(); i++){
-            if(users.getElement(i).getEmail().equals(user.getEmail()))
-                return false;
-        }
-        users.add(user);
-        JOptionPane.showMessageDialog(null,"Se agrego correctamente el nuevo usuario");
-        return true;
-    }
-
-    public static void addSong(Song song){
-        songs.addCircled(song);
-    }
-
     public DoubleCircledLinkedList<Song> getSongs() {return songs;}
     public void setSongs(DoubleCircledLinkedList<Song> songs) {this.songs = songs;}
     public DoubleLinkedList<User> getUsers() {return users;}
