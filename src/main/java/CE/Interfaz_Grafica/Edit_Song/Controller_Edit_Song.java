@@ -1,6 +1,8 @@
 package CE.Interfaz_Grafica.Edit_Song;
 
 import CE.Application;
+import CE.Clases_Principales.Service;
+import CE.Clases_Principales.Song;
 
 import javax.swing.*;
 import java.awt.*;
@@ -34,8 +36,10 @@ public class Controller_Edit_Song {
     public Model_Edit_Song getModel() {
         return model;
     }
-
     public void setModel(Model_Edit_Song model) {
         this.model = model;
+    }
+    public void edit(String Name, String Genero, String Artista,String Album,String Ano, String Letra){
+        Service.instance().editSong(Name, Genero, Artista,Album,Ano, Letra);
     }
 }

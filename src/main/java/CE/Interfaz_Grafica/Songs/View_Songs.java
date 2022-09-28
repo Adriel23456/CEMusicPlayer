@@ -1,12 +1,20 @@
 package CE.Interfaz_Grafica.Songs;
 
-import CE.Clases_Principales.Sound;
+import CE.Application;
+import CE.Clases_De_Estructuras_De_Datos.DoubleLinkedList;
+import CE.Clases_Principales.*;
+import CE.Interfaz_Grafica.Playlist.View_Playlist;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.Observable;
 import java.util.Observer;
+
+import static java.lang.Boolean.FALSE;
+import static java.lang.Boolean.TRUE;
 
 public class View_Songs implements Observer {
     public static final Boolean[] reproduccion = {Boolean.TRUE};
@@ -21,7 +29,6 @@ public class View_Songs implements Observer {
     private JButton agregarButton;
     private JButton eliminarButton;
     private JButton editarButton;
-    private JTextField Buscador;
     private JTable Canciones;
     private JButton reproducirButton;
     private JButton pausarButton;
@@ -30,12 +37,12 @@ public class View_Songs implements Observer {
     private JButton masButton;
     private JButton menosButton;
     private JPanel panel;
-    private JButton returnButton;
     private JCheckBox reproduccionConstanteCheckBox;
     private JCheckBox cancionFavoritaCheckBox;
     private String reproduccionConstante = "OFF";
-    private String cancionFavorita = "OFF";
-
+    private final boolean[] notselected = {TRUE};
+    private Song Selected_song = new Song();
+    int row = 0;
     public void Edit_Song(){
         controller.edit_song();
     }
@@ -44,54 +51,91 @@ public class View_Songs implements Observer {
         agregarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Add_Song();
+                if (View_Playlist.playlistselected[0] == FALSE){
+                    JOptionPane.showMessageDialog(null,"Favor Seleccionar una biblioteca");
+                }
+                else{
+                    Add_Song();
+                }
             }
         });
         eliminarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                if (notselected[0] == TRUE){
+                    JOptionPane.showMessageDialog(null,"Favor Seleccionar una canción");
+                }
+                else{
+                    controller.borrar(Selected_song);
+                    notselected[0] = TRUE;
+                }
             }
         });
         editarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Edit_Song();
+                if (notselected[0] == TRUE){
+                    JOptionPane.showMessageDialog(null,"Favor Seleccionar una canción");
+                }
+                else{
+                    Application.edit_song_controller.getModel().setSelected_song(Selected_song);
+                    Application.edit_song_controller.getModel().commit();
+                    Edit_Song();
+                    notselected[0] = TRUE;
+                }
             }
         });
         cancionFavoritaCheckBox.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                if (notselected[0] == TRUE){
+                    cancionFavoritaCheckBox.setSelected(FALSE);
+                    JOptionPane.showMessageDialog(null,"Favor Seleccionar una canción");
+                }
+                else{
+                    DoubleLinkedList<Song> favoritesongs = Application.playlist_controller.getModel().getUser().getFavoritesongs();
+                    if (cancionFavoritaCheckBox.isSelected()){
+                        favoritesongs.add(Selected_song);
+                    }
+                    else{
+                        favoritesongs.remove(Service.instance().SongGet2(Selected_song));
+                    }
+                    notselected[0] = TRUE;
+                }
             }
         });
         reproducirButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (reproduccion[0] == Boolean.FALSE){
-                    reproduccion3[0] = Boolean.TRUE;
-                    Sound.stopMusic();
+                if (notselected[0] == TRUE){
+                    JOptionPane.showMessageDialog(null,"Favor Seleccionar una canción");
                 }
-                try {
-                    if (playMusic1[0] == Boolean.TRUE){
-                        //SE DEBE SELECCIONAR LA CANCION QUE LE DIMOS CLICK EN LA PARTE DE LA TABLA, TANTO COMO PARA SETFILE COMO PARA SETFILE 2
-                        Sound.setFile("Canciones/As it was.wav");
-                        reproduccion3[0] = Boolean.FALSE;
-                        Sound.playMusic();
+                else{
+                    if (reproduccion[0] == Boolean.FALSE){
+                        reproduccion3[0] = Boolean.TRUE;
+                        Sound.stopMusic();
                     }
-                    else{
-                        //SE DEBE SELECCIONAR LA CANCION QUE LE DIMOS CLICK EN LA PARTE DE LA TABLA, TANTO COMO PARA SETFILE COMO PARA SETFILE 2
-                        Sound.setFile2("Canciones/MIRÁ MAMÁ.wav");
-                        reproduccion3[0] = Boolean.FALSE;
-                        Sound.playMusic2();
+                    try {
+                        if (playMusic1[0] == Boolean.TRUE){
+                            //SE DEBE SELECCIONAR LA CANCION QUE LE DIMOS CLICK EN LA PARTE DE LA TABLA, TANTO COMO PARA SETFILE COMO PARA SETFILE 2
+                            Sound.setFile(model.getListaSongs().getElement(row).getMP3File());
+                            reproduccion3[0] = Boolean.FALSE;
+                            Sound.playMusic();
+                        }
+                        else{
+                            //SE DEBE SELECCIONAR LA CANCION QUE LE DIMOS CLICK EN LA PARTE DE LA TABLA, TANTO COMO PARA SETFILE 2 COMO PARA SETFILE
+                            Sound.setFile2(model.getListaSongs().getElement(row).getMP3File());
+                            reproduccion3[0] = Boolean.FALSE;
+                            Sound.playMusic2();
+                        }
+                    } catch (InterruptedException ex) {
+                        throw new RuntimeException(ex);
                     }
-                } catch (InterruptedException ex) {
-                    throw new RuntimeException(ex);
+                    Allowvolume[0] = Boolean.TRUE;
+                    cancionUNO[0] = Boolean.TRUE;
+                    reproduccion[0] = Boolean.FALSE;
+                    reproduccion2[0] = Boolean.FALSE;
                 }
-                Allowvolume[0] = Boolean.TRUE;
-                cancionUNO[0] = Boolean.TRUE;
-                reproduccion[0] = Boolean.FALSE;
-                reproduccion2[0] = Boolean.FALSE;
             }
         });
         pausarButton.addActionListener(new ActionListener() {
@@ -106,24 +150,31 @@ public class View_Songs implements Observer {
         anteriorButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (cancionUNO[0] == Boolean.TRUE){
-                    reproduccion2[0] = Boolean.TRUE;
-                    Sound.stopMusic();
-                    try {
-                        if (playMusic1[0] == Boolean.TRUE){
-                            reproduccion2[0] = Boolean.FALSE;
-                            Sound.setFile("Canciones/Latch.wav");
-                            Sound.playMusic();
+                if (notselected[0] == TRUE){
+                    JOptionPane.showMessageDialog(null,"Favor Seleccionar una canción");
+                }
+                else{
+                    if (cancionUNO[0] == Boolean.TRUE){
+                        reproduccion2[0] = Boolean.TRUE;
+                        Sound.stopMusic();
+                        try {
+                            if (playMusic1[0] == Boolean.TRUE){
+                                reproduccion2[0] = Boolean.FALSE;
+                                //ANTERIOR CANCIÓN
+                                Sound.setFile();
+                                Sound.playMusic();
+                            }
+                            else{
+                                //ANTERIOR CANCIÓN
+                                Sound.setFile2();
+                                reproduccion2[0] = Boolean.FALSE;
+                                Sound.playMusic2();
+                            }
+                        } catch (InterruptedException ex) {
+                            throw new RuntimeException(ex);
                         }
-                        else{
-                            Sound.setFile2("Canciones/Latch.wav");
-                            reproduccion2[0] = Boolean.FALSE;
-                            Sound.playMusic2();
-                        }
-                    } catch (InterruptedException ex) {
-                        throw new RuntimeException(ex);
+                        reproduccion[0] = Boolean.FALSE;
                     }
-                    reproduccion[0] = Boolean.FALSE;
                 }
             }
         });
@@ -136,12 +187,14 @@ public class View_Songs implements Observer {
                     try {
                         if (playMusic1[0] == Boolean.TRUE){
                             reproduccion2[0] = Boolean.FALSE;
-                            Sound.setFile("Canciones/The Spins.wav");
+                            //SIGUIENTE CANCIÓN
+                            Sound.setFile();
                             Sound.playMusic();
                         }
                         else{
                             reproduccion2[0] = Boolean.FALSE;
-                            Sound.setFile2("Canciones/The Spins.wav");
+                            //SIGUIENTE CANCIÓN
+                            Sound.setFile2();
                             Sound.playMusic2();
                         }
                     } catch (InterruptedException ex) {
@@ -194,8 +247,29 @@ public class View_Songs implements Observer {
                 }
             }
         });
+        Canciones.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                row = getCanciones().getSelectedRow();
+                Selected_song = take(row);
+                checkfavorite();
+                Sound.stopMusic();
+                notselected[0] = FALSE;
+            }
+        });
     }
 
+    public void checkfavorite(){
+        DoubleLinkedList<Song> favoritesongs = Application.playlist_controller.getModel().getUser().getFavoritesongs();
+        for (int i = 0;i<favoritesongs.getNumberOfElements();i++){
+            if (Selected_song.getName().equals(favoritesongs.getElement(i).getName())){
+                cancionFavoritaCheckBox.setSelected(TRUE);
+                return;
+            }
+        }
+        cancionFavoritaCheckBox.setSelected(FALSE);
+    }
     @Override
     public void update(Observable o, Object arg) {
         int[] cols = {CE.Interfaz_Grafica.Songs.Table_Model.NOMBRE, CE.Interfaz_Grafica.Songs.Table_Model.ARTISTA, CE.Interfaz_Grafica.Songs.Table_Model.ALBUM};
@@ -218,64 +292,60 @@ public class View_Songs implements Observer {
     public JLabel getNombre_Biblioteca() {
         return Nombre_Biblioteca;
     }
-
     public JButton getAgregarButton() {
         return agregarButton;
     }
-
     public JButton getEliminarButton() {
         return eliminarButton;
     }
-
     public JButton getEditarButton() {
         return editarButton;
     }
-
-    public JTextField getBuscador() {
-        return Buscador;
-    }
-
     public JTable getCanciones() {
         return Canciones;
     }
-
     public JButton getReproducirButton() {
         return reproducirButton;
     }
-
     public JButton getPausarButton() {
         return pausarButton;
     }
-
     public JButton getAnteriorButton() {
         return anteriorButton;
     }
-
     public JButton getSiguienteButton() {
         return siguienteButton;
     }
-
     public JButton getMasButton() {
         return masButton;
     }
-
     public JButton getMenosButton() {
         return menosButton;
     }
-
     public JPanel getPanel() {
         return panel;
     }
-
-    public JButton getReturnButton() {
-        return returnButton;
-    }
-
     public JCheckBox getReproduccionConstanteCheckBox() {
         return reproduccionConstanteCheckBox;
     }
-
     public JCheckBox getCancionFavoritaCheckBox() {
         return cancionFavoritaCheckBox;
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public void setRow(int row) {
+        this.row = row;
+    }
+
+    public Song take(int row){
+        String code = model.getListaSongs().getElement(row).getName();
+        Song e = null;
+        try{
+            e = Service.instance().SongGet(code, Application.add_songs_controller.getModel().getListaSongsOficial());
+        }catch (Exception ex){}
+        return e;
     }
 }

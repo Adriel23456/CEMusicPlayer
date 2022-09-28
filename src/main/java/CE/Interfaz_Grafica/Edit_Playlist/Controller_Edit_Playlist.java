@@ -11,6 +11,7 @@ import java.awt.*;
 public class Controller_Edit_Playlist {
     View_Edit_Playlist view;
     Model_Edit_Playlist model;
+    String nombre_playlist = "";
 
     public Controller_Edit_Playlist(View_Edit_Playlist view, Model_Edit_Playlist model) {
         this.model = model;
@@ -33,7 +34,10 @@ public class Controller_Edit_Playlist {
     public void hide(){
         dialog.dispose();
     }
+
     public void edit(Playlist playlist){
+        nombre_playlist = playlist.getName();
+        model.commit();
         show();
         String name = view.getNewBiblioteca().getText();
         Service.instance().editPlaylist(Application.playlist_controller.getModel().getUser(),playlist, name);

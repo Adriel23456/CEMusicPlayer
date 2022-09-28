@@ -12,6 +12,7 @@ public class User {
     private String email;
     private String province;
     private String password;
+    private DoubleLinkedList<Song> favoritesongs;
 
     /**
      * Constructor de los usuarios para la primera vez que se llama a la función
@@ -22,6 +23,7 @@ public class User {
         this.email = "";
         this.province = "";
         this.password = "";
+        this.favoritesongs = new DoubleLinkedList<>();
     }
 
     /**
@@ -32,12 +34,13 @@ public class User {
      * @param province
      * @param password
      */
-    public User(DoubleLinkedList<Playlist> playlists, String name, String email, String province, String password) {
+    public User(DoubleLinkedList<Playlist> playlists, String name, String email, String province, String password, DoubleLinkedList<Song> favoritesongs) {
         this.playlists = playlists;
         this.name = name;
         this.email = email;
         this.province = province;
         this.password = password;
+        this.favoritesongs = favoritesongs;
     }
 
 
@@ -65,4 +68,6 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+    public DoubleLinkedList<Song> getFavoritesongs() {return favoritesongs;}
+    public void setFavoritesongs(DoubleLinkedList<Song> favoritesongs) {this.favoritesongs = favoritesongs;}
 }

@@ -1,6 +1,7 @@
 package CE.Clases_Principales;
 
 import CE.Application;
+import CE.Clases_De_Estructuras_De_Datos.DoubleCircledLinkedList;
 import CE.Clases_De_Estructuras_De_Datos.DoubleLinkedList;
 
 import javax.swing.*;
@@ -24,7 +25,7 @@ public class Login {
      * @return Retorna un nuevo usuario
      */
     public User registerNewUser(String[] array){
-        return new User(new DoubleLinkedList<Playlist>(), array [0], array [1], array [2], array [3]);
+        return new User(new DoubleLinkedList<Playlist>(), array [0], array [1], array [2], array [3], new DoubleLinkedList<Song>());
     }
 
     /**
@@ -39,6 +40,9 @@ public class Login {
             if (users.getElement(i).getEmail().equals(email)){
                 if (users.getElement(i).getPassword().equals(password)){
                     Application.playlist_controller.getModel().setUser(users.getElement(i));
+                    Application.songs_controller.getModel().setPlaylist(new Playlist());
+                    Application.songs_controller.getModel().commit();
+                    Application.playlist_controller.getModel().commit();
                     return true;
                 }
             }

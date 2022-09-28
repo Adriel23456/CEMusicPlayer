@@ -5,38 +5,49 @@ import CE.Clases_Principales.*;
 
 import javax.swing.*;
 import java.awt.event.*;
+import java.security.KeyStore;
 import java.util.Observable;
 import java.util.Observer;
+
+import static java.lang.Boolean.FALSE;
+import static java.lang.Boolean.TRUE;
 
 public class View_Add_Songs implements Observer {
     private Controller_Add_Songs controller;
     private Model_Add_Songs model;
-    private JTextField Buscador;
     private JButton aceptarButton;
     private JButton cancelarButton;
     private JPanel panel;
     private JTable Canciones;
+    private final boolean[] notselected = {TRUE};
 
     public View_Add_Songs() {
-        Buscador.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-                super.keyTyped(e);
-            }
-        });
         aceptarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int row = getCanciones().getSelectedRow();
-                Song song = take(row);
-                controller.addSong(song);
-                controller.hide();
+                if (notselected[0] == FALSE){
+                    Song song = take(row);
+                    controller.addSong(song);
+                    controller.hide();
+                }
+                else{
+                    JOptionPane.showMessageDialog(null,"Favor Seleccionar una canción");
+                }
             }
         });
         cancelarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 controller.hide();
+            }
+        });
+
+        Canciones.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                notselected[0] = FALSE;
             }
         });
     }
@@ -47,32 +58,16 @@ public class View_Add_Songs implements Observer {
         Canciones.setRowHeight(25);
         this.panel.revalidate();
     }
-
     public void setController(Controller_Add_Songs controller) {this.controller = controller;}
-
     public void setModel(Model_Add_Songs model) {
         this.model = model;
         model.addObserver(this);
     }
-    public JTextField getBuscador() {
-        return Buscador;
-    }
-    public JButton getAceptarButton() {
-        return aceptarButton;
-    }
-    public JButton getCancelarButton() {
-        return cancelarButton;
-    }
-    public JPanel getPanel() {
-        return panel;
-    }
-    public JTable getCanciones() {
-        return Canciones;
-    }
-    public void setCanciones(JTable canciones) {
-        Canciones = canciones;
-    }
-
+    public JButton getAceptarButton() {return aceptarButton;}
+    public JButton getCancelarButton() {return cancelarButton;}
+    public JPanel getPanel() {return panel;}
+    public JTable getCanciones() {return Canciones;}
+    public void setCanciones(JTable canciones) {Canciones = canciones;}
     public Song take(int row){
         String code = model.getListaSongsOficial().getElement(row).getName();
         Song e = null;

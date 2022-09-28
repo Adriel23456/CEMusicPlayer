@@ -1,5 +1,6 @@
 package CE.Clases_Principales;
 
+import CE.Application;
 import CE.Interfaz_Grafica.Songs.View_Songs;
 import javax.sound.sampled.*;
 import java.io.File;
@@ -44,7 +45,8 @@ public class Sound {
         clip1.setMicrosecondPosition(clipTimePosition);
         fc1.setValue(currentVolume);
         clip1.start();
-        setFile2("Canciones/MIRÁ MAMÁ.wav"/*Aquí se deja clara la siguiente canción a tocar*/);
+        //SIGUIENTE CANCIÓN
+        setFile2();
         LineListener listener1 = new LineListener() {
             public void update(LineEvent event){
                 if (event.getType() == LineEvent.Type.STOP && View_Songs.reproduccion[0] == Boolean.TRUE) {
@@ -79,7 +81,8 @@ public class Sound {
         clip2.setMicrosecondPosition(clipTimePosition2);
         fc2.setValue(currentVolume);
         clip2.start();
-        setFile("Canciones/MIRÁ MAMÁ.wav"/*Aquí se deja clara la siguiente canción a tocar*/);
+        //SIGUIENTE CANCIÓN
+        setFile();
         LineListener listener1 = new LineListener() {
             public void update(LineEvent event){
                 if (event.getType() == LineEvent.Type.STOP && View_Songs.reproduccion[0] == Boolean.TRUE) {

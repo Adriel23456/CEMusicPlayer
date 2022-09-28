@@ -3,6 +3,7 @@ package CE.Interfaz_Grafica.Edit_Song;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -23,6 +24,7 @@ public class View_Edit_Song implements Observer {
         aceptarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                controller.edit(Label.getText(),Genero.getText(),Artista.getText(),Album.getText(),Ano.getText(),Letra.getText());
                 controller.hide();
             }
         });
@@ -35,6 +37,12 @@ public class View_Edit_Song implements Observer {
     }
     @Override
     public void update(Observable o, Object arg) {
+        Label.setText(model.selected_song.getName());
+        Genero.setText(model.selected_song.getGenre());
+        Artista.setText(model.selected_song.getArtist());
+        Album.setText(model.selected_song.getAlbum());
+        Ano.setText(model.selected_song.getYear());
+        Letra.setText(model.selected_song.getLyrics());
     }
 
     public void setController(Controller_Edit_Song controller) {this.controller = controller;}

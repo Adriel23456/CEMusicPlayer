@@ -1,8 +1,15 @@
 package CE.Interfaz_Grafica.Songs;
 
 import CE.Application;
+import CE.Clases_De_Estructuras_De_Datos.DoubleCircledLinkedList;
+import CE.Clases_De_Estructuras_De_Datos.DoubleLinkedList;
+import CE.Clases_Principales.Playlist;
+import CE.Clases_Principales.Service;
+import CE.Clases_Principales.Song;
 import CE.Interfaz_Grafica.Add_Songs.Controller_Add_Songs;
 import CE.Interfaz_Grafica.Edit_Song.Controller_Edit_Song;
+
+import javax.swing.*;
 
 public class Controller_Songs {
     Controller_Edit_Song controller_edit_song;
@@ -18,43 +25,21 @@ public class Controller_Songs {
         view.setController(this);
         view.setModel(model);
     }
-    /*
+
+    public void borrar(Song song){
+        if (model.getListaSongs().getNumberOfElements() == 0){
+            JOptionPane.showMessageDialog(null,"Favor seleccionar una canción");
+        }
+        else{
+            Service.instance().removeSong(song,model.getPlaylist());
+            buscar("");
+        }
+    }
     public void buscar(String filtro){
-        DoubleLinkedList<Playlist> rows = Service.instance().playlistSearch(filtro);
-        System.out.println(rows.getNumberOfElements());
-        model.setLista(rows);
-        System.out.println(model.getLista().getNumberOfElements());
+        DoubleCircledLinkedList<Song> rows = Service.instance().songSearch(filtro);
+        model.setListaSongs(rows);
         model.commit();
     }
-    public void edit(int row){
-        String code = model.getUser().getPlaylists().getElement(row).getName();
-        Playlist e = null;
-        try{
-            e = Service.instance().PlaylistGet(code, model.getUser());
-            Application.edit_playlist_controller.edit(e);
-            model.commit();
-        }catch (Exception ex){}
-    }
-    public void borrar(User user, int row){
-        String code = model.getUser().getPlaylists().getElement(row).getName();
-        Playlist e = null;
-        try{
-            e = Service.instance().PlaylistGet(code, model.getUser());
-            Service.instance().removePlaylist(e,user);
-            buscar("");
-
-        }catch (Exception ex){}
-    }
-    public void playlistclick(int row){
-        String code = model.getUser().getPlaylists().getElement(row).getName();
-        Playlist e = null;
-        try{
-            e = Service.instance().PlaylistGet(code, model.getUser());
-            Service.instance().loadPlaylist(e);
-            Application.songs_controller.getModel().commit();
-        }catch (Exception ex){}
-    }
-    */
     public void add_song(){
         Application.add_songs_controller.show();
     }

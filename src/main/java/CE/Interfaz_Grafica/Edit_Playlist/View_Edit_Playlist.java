@@ -1,5 +1,7 @@
 package CE.Interfaz_Grafica.Edit_Playlist;
 
+import CE.Application;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -32,6 +34,7 @@ public class View_Edit_Playlist implements Observer {
     }
     @Override
     public void update(Observable o, Object arg) {
+        Biblioteca.setText(controller.nombre_playlist);
     }
 
     public void setController(Controller_Edit_Playlist controller) {this.controller = controller;}

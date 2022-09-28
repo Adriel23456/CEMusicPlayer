@@ -9,6 +9,8 @@ import CE.Interfaz_Grafica.Create_Playlist.Controller_Create_Playlist;
 import CE.Interfaz_Grafica.Edit_Playlist.Controller_Edit_Playlist;
 import CE.Interfaz_Grafica.Login.View_Login;
 
+import javax.swing.*;
+
 public class Controller_Playlist {
 
     Controller_Edit_Playlist controller_edit_playlist;
@@ -32,9 +34,7 @@ public class Controller_Playlist {
     }
     public void buscar(String filtro){
         DoubleLinkedList<Playlist> rows = Service.instance().playlistSearch(filtro);
-        System.out.println(rows.getNumberOfElements());
         model.setLista(rows);
-        System.out.println(model.getLista().getNumberOfElements());
         model.commit();
     }
     public void edit(int row){
@@ -47,14 +47,16 @@ public class Controller_Playlist {
         }catch (Exception ex){}
     }
     public void borrar(User user, int row){
-        String code = model.getUser().getPlaylists().getElement(row).getName();
-        Playlist e = null;
-        try{
+        if (model.getUser().getPlaylists().getNumberOfElements() == 0){
+            JOptionPane.showMessageDialog(null,"Favor seleccionar una biblioteca");
+        }
+        else{
+            String code = model.getUser().getPlaylists().getElement(row).getName();
+            Playlist e = null;
             e = Service.instance().PlaylistGet(code, model.getUser());
             Service.instance().removePlaylist(e,user);
             buscar("");
-
-        }catch (Exception ex){}
+        }
     }
     public void playlistclick(int row){
         String code = model.getUser().getPlaylists().getElement(row).getName();

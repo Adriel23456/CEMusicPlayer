@@ -20,7 +20,7 @@ public class Controller_Add_Songs {
     static JDialog dialog;
     public void show(){
         dialog = new JDialog(Application.window,"Añadir Nueva Canción", true);
-        dialog.setSize(475,200);
+        dialog.setSize(475,500);
         dialog.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         dialog.setContentPane(view.getPanel());
         Point location = Application.window.getLocation();

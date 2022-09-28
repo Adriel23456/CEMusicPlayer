@@ -7,7 +7,6 @@ import CE.Clases_Principales.Song;
 import java.util.Observer;
 
 public class Model_Edit_Song extends java.util.Observable{
-
     Playlist current_playlist;
     public Playlist getCurrent_playlist() {return current_playlist;}
     public void setCurrent_playlist(Playlist current_playlist) {
@@ -16,6 +15,10 @@ public class Model_Edit_Song extends java.util.Observable{
     DoubleCircledLinkedList<Song> ListaSongsOficial;
     public DoubleCircledLinkedList<Song> getListaSongsOficial() {return ListaSongsOficial;}
     public void setListaSongsOficial(DoubleCircledLinkedList<Song> listaSongsOficial) {ListaSongsOficial = listaSongsOficial;}
+    public Song selected_song = new Song();
+    public Song getSelected_song() {return selected_song;}
+    public void setSelected_song(Song selected_song) {this.selected_song = selected_song;}
+
     public Model_Edit_Song(){
     }
     /**

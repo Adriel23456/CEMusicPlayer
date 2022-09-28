@@ -3,8 +3,11 @@ package CE.Clases_Principales;
 import CE.Application;
 import CE.Clases_De_Estructuras_De_Datos.DoubleCircledLinkedList;
 import CE.Clases_De_Estructuras_De_Datos.DoubleLinkedList;
+import CE.Interfaz_Grafica.Playlist.View_Playlist;
 
 import javax.swing.*;
+
+import static java.lang.Boolean.FALSE;
 
 
 public class Service {
@@ -46,6 +49,7 @@ public class Service {
                 return;
             }
         }
+        Application.songs_controller.getModel().getListaSongs().addCircled(song);
         current_playlist.getSongs().addCircled(song);
         JOptionPane.showMessageDialog(null,"Se agrego correctamente la canción");
     }
@@ -67,19 +71,21 @@ public class Service {
 
     /**
      * Este es un método el cual recibe una canción de la lista oficial de canciones y cambia sus valores
-     * @param edit_song Nombre del objeto Song que se creó para editar al oficial
      */
-    public static void editSong(Song edit_song){
+    public static void editSong(String Name, String Genero, String Artista,String Album,String Ano, String Letra){
         //Se pregunta cuál es la canción de la lista oficial a la que le va a cambiar sus datos:
         DoubleCircledLinkedList<Song> songs = data.getSongs();
         for (int i = 0; i < songs.getNumberOfElements(); i++){
-            if (songs.getElement(i).getName().equals(edit_song.getName())){
+            if (songs.getElement(i).getName().equals(Name)){
                 //Después, le cambia al elemento oficial los datos, por los del nuevo objeto creado
-                songs.getElement(i).setAlbum(edit_song.getAlbum());
-                songs.getElement(i).setArtist(edit_song.getArtist());
-                songs.getElement(i).setGenre(edit_song.getGenre());
-                songs.getElement(i).setYear(edit_song.getYear());
-                songs.getElement(i).setLyrics(edit_song.getLyrics());
+                songs.getElement(i).setGenre(Genero);
+                songs.getElement(i).setArtist(Artista);
+                songs.getElement(i).setAlbum(Album);
+                songs.getElement(i).setYear(Ano);
+                songs.getElement(i).setLyrics(Letra);
+                Application.add_songs_controller.getModel().setListaSongsOficial(songs);
+                Application.songs_controller.getModel().commit();
+                JOptionPane.showMessageDialog(null,"Se cambio correctamente la información de la canción");
             }
         }
     }
@@ -114,11 +120,37 @@ public class Service {
         }
         return null;
     }
+    public static int SongGet2(Song song){
+        DoubleLinkedList<Song> favoritesongsuUser = Application.playlist_controller.getModel().getUser().getFavoritesongs();
+        for (int i = 0; i<favoritesongsuUser.getNumberOfElements(); i++){
+            if(favoritesongsuUser.getElement(i).getName().equals(song.getName())){
+                return i;
+            }
+        }
+        return 0;
+    }
 
     public static void removePlaylist(Playlist playlist, User current_user){
         for (int i = 0; i<current_user.getPlaylists().getNumberOfElements(); i++){
             if(current_user.getPlaylists().getElement(i).getName().equals(playlist.getName())){
+                if (Application.songs_controller.getModel().getPlaylist().equals(playlist)){
+                    View_Playlist.playlistselected[0] = FALSE;
+                    Application.songs_controller.getModel().setPlaylist(new Playlist());
+                    Application.songs_controller.getModel().commit();
+                }
                 current_user.getPlaylists().remove(i);
+                JOptionPane.showMessageDialog(null,"Se elimino correctamente la biblioteca");
+            }
+        }
+        return;
+    }
+
+
+    public static void removeSong(Song song, Playlist current_playlist){
+        for (int i = 0;i<current_playlist.getSongs().getNumberOfElements(); i++){
+            if(current_playlist.getSongs().getElement(i).getName().equals(song.getName())){
+                current_playlist.getSongs().remove(i);
+                JOptionPane.showMessageDialog(null,"Se elimino correctamente la canción");
             }
         }
     }
@@ -130,6 +162,17 @@ public class Service {
                 Lista.add(Application.playlist_controller.getModel().getUser().getPlaylists().getElement(i));
             } else if (filtro.equals("")) {
                 Lista.add(Application.playlist_controller.getModel().getUser().getPlaylists().getElement(i));
+            }
+        }
+        return Lista;
+    }
+    public DoubleCircledLinkedList<Song> songSearch(String filtro){
+        DoubleCircledLinkedList<Song> Lista = new DoubleCircledLinkedList<>();
+        for (int i = 0;i<Application.songs_controller.getModel().getPlaylist().getSongs().getNumberOfElements();i++){
+            if(filtro.equals(Application.songs_controller.getModel().getPlaylist().getSongs().getElement(i).getName())){
+                Lista.addCircled(Application.songs_controller.getModel().getPlaylist().getSongs().getElement(i));
+            } else if (filtro.equals("")) {
+                Lista.addCircled(Application.songs_controller.getModel().getPlaylist().getSongs().getElement(i));
             }
         }
         return Lista;
