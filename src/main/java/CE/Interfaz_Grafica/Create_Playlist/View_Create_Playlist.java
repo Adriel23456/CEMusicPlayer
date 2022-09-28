@@ -47,7 +47,7 @@ public class View_Create_Playlist implements Observer {
     }
 
     public Playlist take(){
-        return new Playlist(new DoubleCircledLinkedList<Song>(),getNombreBiblioteca().getText().toString(),"");
+        return new Playlist(new DoubleCircledLinkedList<Song>(),getNombreBiblioteca().getText().toString(),controller.fecha());
     }
 
     public JButton getAceptarButton() {

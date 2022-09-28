@@ -43,8 +43,17 @@ public class View_Songs implements Observer {
     private final boolean[] notselected = {TRUE};
     private Song Selected_song = new Song();
     int row = 0;
+    int row2 = 0;
     public void Edit_Song(){
         controller.edit_song();
+    }
+
+    public Song getSelected_song() {
+        return Selected_song;
+    }
+
+    public void setSelected_song(Song selected_song) {
+        Selected_song = selected_song;
     }
 
     public View_Songs() {
@@ -118,13 +127,13 @@ public class View_Songs implements Observer {
                     try {
                         if (playMusic1[0] == Boolean.TRUE){
                             //SE DEBE SELECCIONAR LA CANCION QUE LE DIMOS CLICK EN LA PARTE DE LA TABLA, TANTO COMO PARA SETFILE COMO PARA SETFILE 2
-                            Sound.setFile(model.getListaSongs().getElement(row).getMP3File());
+                            Sound.setFile(model.getListaSongs().getElement(getRow()).getMP3File());
                             reproduccion3[0] = Boolean.FALSE;
                             Sound.playMusic();
                         }
                         else{
                             //SE DEBE SELECCIONAR LA CANCION QUE LE DIMOS CLICK EN LA PARTE DE LA TABLA, TANTO COMO PARA SETFILE 2 COMO PARA SETFILE
-                            Sound.setFile2(model.getListaSongs().getElement(row).getMP3File());
+                            Sound.setFile2(model.getListaSongs().getElement(getRow()).getMP3File());
                             reproduccion3[0] = Boolean.FALSE;
                             Sound.playMusic2();
                         }
@@ -161,12 +170,12 @@ public class View_Songs implements Observer {
                             if (playMusic1[0] == Boolean.TRUE){
                                 reproduccion2[0] = Boolean.FALSE;
                                 //ANTERIOR CANCIÓN
-                                Sound.setFile();
+                                Sound.setFile(Sound.lastrow());
                                 Sound.playMusic();
                             }
                             else{
                                 //ANTERIOR CANCIÓN
-                                Sound.setFile2();
+                                Sound.setFile2(Sound.lastrow());
                                 reproduccion2[0] = Boolean.FALSE;
                                 Sound.playMusic2();
                             }
@@ -188,13 +197,13 @@ public class View_Songs implements Observer {
                         if (playMusic1[0] == Boolean.TRUE){
                             reproduccion2[0] = Boolean.FALSE;
                             //SIGUIENTE CANCIÓN
-                            Sound.setFile();
+                            Sound.setFile(Sound.nextrow());
                             Sound.playMusic();
                         }
                         else{
                             reproduccion2[0] = Boolean.FALSE;
                             //SIGUIENTE CANCIÓN
-                            Sound.setFile2();
+                            Sound.setFile(Sound.nextrow());
                             Sound.playMusic2();
                         }
                     } catch (InterruptedException ex) {
@@ -252,9 +261,9 @@ public class View_Songs implements Observer {
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 row = getCanciones().getSelectedRow();
+                row2 = getCanciones().getSelectedRow() + 1;
                 Selected_song = take(row);
                 checkfavorite();
-                Sound.stopMusic();
                 notselected[0] = FALSE;
             }
         });
@@ -338,6 +347,14 @@ public class View_Songs implements Observer {
 
     public void setRow(int row) {
         this.row = row;
+    }
+
+    public int getRow2() {
+        return row2;
+    }
+
+    public void setRow2(int row2) {
+        this.row2 = row2;
     }
 
     public Song take(int row){

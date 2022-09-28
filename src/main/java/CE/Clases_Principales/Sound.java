@@ -1,9 +1,11 @@
 package CE.Clases_Principales;
 
 import CE.Application;
+import CE.Clases_De_Estructuras_De_Datos.DoubleCircledLinkedList;
 import CE.Interfaz_Grafica.Songs.View_Songs;
 import javax.sound.sampled.*;
 import java.io.File;
+import java.lang.annotation.ElementType;
 
 public class Sound {
     public static long clipTimePosition = 0;
@@ -45,15 +47,16 @@ public class Sound {
         clip1.setMicrosecondPosition(clipTimePosition);
         fc1.setValue(currentVolume);
         clip1.start();
+        int currentrow = Application.songs_controller.getView().getRow();
         //SIGUIENTE CANCIÓN
-        setFile2();
+        setFile2(nextrow());
         LineListener listener1 = new LineListener() {
             public void update(LineEvent event){
                 if (event.getType() == LineEvent.Type.STOP && View_Songs.reproduccion[0] == Boolean.TRUE) {
                     update(event);
                 }
                 if (event.getType() == LineEvent.Type.STOP && (View_Songs.reproduccion2[0] == Boolean.TRUE | View_Songs.reproduccion3[0] == Boolean.TRUE)){
-                    System.out.println("HEY TE MORISTE?");
+                    System.out.println("DEADGE");
                     return;
                 }
                 if (event.getType() == LineEvent.Type.STOP){
@@ -81,15 +84,16 @@ public class Sound {
         clip2.setMicrosecondPosition(clipTimePosition2);
         fc2.setValue(currentVolume);
         clip2.start();
+        int currentrow = Application.songs_controller.getView().getRow();
         //SIGUIENTE CANCIÓN
-        setFile();
+        setFile2(nextrow());
         LineListener listener1 = new LineListener() {
             public void update(LineEvent event){
                 if (event.getType() == LineEvent.Type.STOP && View_Songs.reproduccion[0] == Boolean.TRUE) {
                     update(event);
                 }
                 if (event.getType() == LineEvent.Type.STOP && (View_Songs.reproduccion2[0] == Boolean.TRUE | View_Songs.reproduccion3[0] == Boolean.TRUE)){
-                    System.out.println("HEY TE MORISTE?");
+                    System.out.println("DEADGE");
                     return;
                 }
                 if (event.getType() == LineEvent.Type.STOP){
@@ -157,5 +161,33 @@ public class Sound {
             clip2 = new Clip();
         }
         return instance;
+    }
+    public static String nextrow(){
+        DoubleCircledLinkedList<Song> Lista = Application.songs_controller.getModel().getPlaylist().getSongs();
+        int nextrow = Application.songs_controller.getView().getRow2();
+        if (Lista.getElement(nextrow) == null){
+            nextrow = 0;
+            Application.songs_controller.getView().setRow2(nextrow);
+            return Lista.getElement(nextrow).getMP3File();
+        }
+        else{
+            nextrow = Application.songs_controller.getView().getRow2();
+            Application.songs_controller.getView().setRow2(nextrow);
+            return Lista.getElement(nextrow).getMP3File();
+        }
+    }
+    public static String lastrow(){
+        DoubleCircledLinkedList<Song> Lista = Application.songs_controller.getModel().getPlaylist().getSongs();
+        int lastrow = (Application.songs_controller.getView().getRow() - 1);
+        if (lastrow == - 1){
+            lastrow = Application.songs_controller.getModel().getPlaylist().getSongs().getNumberOfElements() - 1;
+            Application.songs_controller.getView().setRow2(lastrow);
+            return Lista.getElement(lastrow).getMP3File();
+        }
+        else{
+            lastrow = Application.songs_controller.getView().getRow() - 1;
+            Application.songs_controller.getView().setRow(lastrow);
+            return Lista.getElement(lastrow).getMP3File();
+        }
     }
 }

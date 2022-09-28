@@ -7,6 +7,9 @@ import CE.Clases_Principales.User;
 
 import javax.swing.*;
 import java.awt.*;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class Controller_Create_Playlist {
     View_Create_Playlist view;
@@ -37,5 +40,14 @@ public class Controller_Create_Playlist {
         User user = Application.playlist_controller.getModel().getUser();
         Service.instance().addPlaylist(user,playlist);
         Application.playlist_controller.getModel().commit();
+    }
+    public String fecha(){
+        String systemLocale = System.getProperty("user.language");
+        String s;
+        Locale locale;
+
+        locale = new Locale(systemLocale);
+        s = DateFormat.getDateInstance(DateFormat.MEDIUM, locale).format(new Date());
+        return s;
     }
 }
