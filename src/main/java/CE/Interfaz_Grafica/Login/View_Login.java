@@ -39,6 +39,7 @@ public class View_Login implements Observer {
                     controller.hide();
                     setText();
                     Application.playlist_controller.getModel().commit();
+                    Application.songs_controller.getModel().commit();
                 }
             }
         });

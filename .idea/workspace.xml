@@ -4,38 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9346a45e-ccbf-4d30-bb14-f8ecaf000672" name="Changes" comment="Version 1.8">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Add_Songs/Table_Model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Playlist/Table_Model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Songs/Table_Model.java" afterDir="false" />
+    <list default="true" id="9346a45e-ccbf-4d30-bb14-f8ecaf000672" name="Changes" comment="Version 1.9 (Primera Funcional)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Clases_De_Estructuras_De_Datos/DoubleCircledLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Clases_De_Estructuras_De_Datos/DoubleCircledLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Playlist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Clases_Principales/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Data/XmlPersister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Data/XmlPersister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Add_Songs/Controller_Add_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Add_Songs/Controller_Add_Songs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Add_Songs/Model_Add_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Add_Songs/Model_Add_Songs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Add_Songs/View_Add_Songs.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Add_Songs/View_Add_Songs.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Add_Songs/View_Add_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Add_Songs/View_Add_Songs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Create_Playlist/Controller_Create_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Create_Playlist/Controller_Create_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Create_Playlist/View_Create_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Create_Playlist/View_Create_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Edit_Playlist/Controller_Edit_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Edit_Playlist/Controller_Edit_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Edit_Playlist/Model_Edit_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Edit_Playlist/Model_Edit_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Edit_Song/Controller_Edit_Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Edit_Song/Controller_Edit_Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Edit_Song/Model_Edit_Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Edit_Song/Model_Edit_Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Login/Controller_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Login/Controller_Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Login/View_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Login/View_Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Playlist/Controller_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Playlist/Controller_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Playlist/Model_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Playlist/Model_Playlist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Playlist/View_Playlist.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Playlist/View_Playlist.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Playlist/View_Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Playlist/View_Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Songs/Controller_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Songs/Controller_Songs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Songs/Model_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Songs/Model_Songs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Songs/View_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Songs/View_Songs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Tabbedpane/View_Tabbedpane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CE/Interfaz_Grafica/Tabbedpane/View_Tabbedpane.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +110,7 @@
       <workItem from="1664165121057" duration="7071000" />
       <workItem from="1664251480904" duration="345000" />
       <workItem from="1664255885669" duration="5976000" />
-      <workItem from="1664324056921" duration="21860000" />
+      <workItem from="1664324056921" duration="23832000" />
     </task>
     <task id="LOCAL-00001" summary="El principio del fin">
       <created>1663564879675</created>
@@ -270,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664166327039</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Version 1.9 (Primera Funcional)">
+      <created>1664346060477</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1664346060478</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +284,8 @@
     <MESSAGE value="Version 1.6" />
     <MESSAGE value="Version 1.7" />
     <MESSAGE value="Version 1.8" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1.8" />
+    <MESSAGE value="Version 1.9 (Primera Funcional)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 1.9 (Primera Funcional)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

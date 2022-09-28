@@ -8,24 +8,6 @@ import CE.Clases_Principales.User;
 import CE.Interfaz_Grafica.Create_Playlist.Controller_Create_Playlist;
 import CE.Interfaz_Grafica.Edit_Playlist.Controller_Edit_Playlist;
 import CE.Interfaz_Grafica.Login.View_Login;
-/*
-import com.itextpdf.io.font.constants.StandardFonts;
-import com.itextpdf.io.image.ImageDataFactory;
-import com.itextpdf.kernel.colors.Color;
-import com.itextpdf.kernel.colors.ColorConstants;
-import com.itextpdf.kernel.font.PdfFont;
-import com.itextpdf.kernel.font.PdfFontFactory;
-import com.itextpdf.kernel.pdf.PdfDocument;
-import com.itextpdf.kernel.pdf.PdfWriter;
-import com.itextpdf.layout.Document;
-import com.itextpdf.layout.borders.Border;
-import com.itextpdf.layout.element.Cell;
-import com.itextpdf.layout.element.Image;
-import com.itextpdf.layout.element.Paragraph;
-import com.itextpdf.layout.element.Table;
-import com.itextpdf.layout.properties.HorizontalAlignment;
-import com.itextpdf.layout.properties.TextAlignment;
- */
 
 public class Controller_Playlist {
 
@@ -99,14 +81,5 @@ public class Controller_Playlist {
     public Model_Playlist getModel() {
         return model;
     }
-    /*
-    private Cell getCell(Paragraph paragraph, TextAlignment alignment, boolean hasBorder) {
-        Cell cell = new Cell().add(paragraph);
-        cell.setPadding(0);
-        cell.setTextAlignment(alignment);
-        if(!hasBorder) cell.setBorder(Border.NO_BORDER);
-        return cell;
-    }
-     */
 
 }

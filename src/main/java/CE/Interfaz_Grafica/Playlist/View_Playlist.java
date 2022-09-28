@@ -14,12 +14,10 @@ public class View_Playlist implements Observer {
     private JButton crearButton;
     private JButton eliminarButton;
     private JButton editarButton;
-    private JTextField Biblioteca;
     private JTable Bibliotecas;
     private JPanel panel;
     private JButton loginAnotherButton;
     private JButton seleccionarButton;
-    private JButton buscarButton;
 
     public void Log_out(){controller.log_out();}
     public void Create_Playlist(){
@@ -61,12 +59,6 @@ public class View_Playlist implements Observer {
                 controller.playlistclick(row);
             }
         });
-        buscarButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                controller.buscar(Biblioteca.getText());
-            }
-        });
     }
     @Override
     public void update(Observable o, Object arg) {
@@ -96,10 +88,6 @@ public class View_Playlist implements Observer {
 
     public JButton getEditarButton() {
         return editarButton;
-    }
-
-    public JTextField getBiblioteca() {
-        return Biblioteca;
     }
 
     public JTable getBibliotecas() {

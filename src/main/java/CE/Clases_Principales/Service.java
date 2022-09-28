@@ -109,7 +109,6 @@ public class Service {
     public static Song SongGet(String name, DoubleCircledLinkedList<Song> original_playlist){
         for (int i = 0; i<original_playlist.getNumberOfElements(); i++){
             if(original_playlist.getElement(i).getName().equals(name)){
-                System.out.println("SE SELECCIONO CORRECTAMENTE EL OBJETO DE SONG A AGREGAR");
                 return original_playlist.getElement(i);
             }
         }
