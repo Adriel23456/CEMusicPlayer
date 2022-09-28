@@ -1,6 +1,9 @@
 package CE.Interfaz_Grafica.Edit_Playlist;
 
 import CE.Application;
+import CE.Clases_Principales.Playlist;
+import CE.Clases_Principales.Service;
+import CE.Clases_Principales.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,8 +13,9 @@ public class Controller_Edit_Playlist {
     Model_Edit_Playlist model;
 
     public Controller_Edit_Playlist(View_Edit_Playlist view, Model_Edit_Playlist model) {
-        this.view = view;
         this.model = model;
+        model.setPlaylists(Service.instance().playlistSearch(""));
+        this.view = view;
         view.setController(this);
         view.setModel(model);
     }
@@ -29,4 +33,13 @@ public class Controller_Edit_Playlist {
     public void hide(){
         dialog.dispose();
     }
+    public void edit(Playlist playlist){
+        show();
+        String name = view.getNewBiblioteca().getText();
+        Service.instance().editPlaylist(Application.playlist_controller.getModel().getUser(),playlist, name);
+    }
+
+
+
+    public View_Edit_Playlist getView() {return view;}
 }

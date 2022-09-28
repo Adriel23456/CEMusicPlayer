@@ -1,5 +1,9 @@
 package CE.Interfaz_Grafica.Create_Playlist;
 
+import CE.Clases_De_Estructuras_De_Datos.DoubleCircledLinkedList;
+import CE.Clases_Principales.Playlist;
+import CE.Clases_Principales.Song;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,6 +22,8 @@ public class View_Create_Playlist implements Observer {
         aceptarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                Playlist playlist = take();
+                controller.addplaylist(playlist);
                 controller.hide();
             }
         });
@@ -38,6 +44,10 @@ public class View_Create_Playlist implements Observer {
     public void setModel(Model_Create_Playlist model) {
         this.model = model;
         model.addObserver(this);
+    }
+
+    public Playlist take(){
+        return new Playlist(new DoubleCircledLinkedList<Song>(),getNombreBiblioteca().getText().toString(),"");
     }
 
     public JButton getAceptarButton() {

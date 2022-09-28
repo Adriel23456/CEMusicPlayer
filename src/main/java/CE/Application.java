@@ -1,4 +1,6 @@
 package CE;
+import CE.Clases_Principales.CEMusicPlayer;
+import CE.Clases_Principales.Service;
 import CE.Interfaz_Grafica.Add_Songs.Controller_Add_Songs;
 import CE.Interfaz_Grafica.Add_Songs.Model_Add_Songs;
 import CE.Interfaz_Grafica.Add_Songs.View_Add_Songs;
@@ -58,6 +60,8 @@ public class Application {
      */
     public static void main(String[] args) throws IOException, LineUnavailableException {
 
+        CEMusicPlayer.instance().setSongs(Service.instance().loadSongs());
+
         window = new JFrame();
         window.setSize(850,600);
         window.setLocation(500,140);
@@ -75,7 +79,7 @@ public class Application {
         */
         Model_Playlist model_playlist = new Model_Playlist();
         View_Playlist view_playlist = new View_Playlist();
-        playlist_controller = new Controller_Playlist(view_playlist,model_playlist);
+        playlist_controller = new Controller_Playlist(view_playlist, model_playlist, edit_playlist_controller, create_playlist_controller);
         /**
          * Se establece el desarrollo de la ventana crear biblioteca
          */
@@ -93,7 +97,7 @@ public class Application {
          */
         Model_Songs model_songs = new Model_Songs();
         View_Songs view_songs = new View_Songs();
-        songs_controller = new Controller_Songs(view_songs,model_songs);
+        songs_controller = new Controller_Songs(view_songs,model_songs, edit_song_controller, add_songs_controller);
         /**
          * Se establece el desarrollo de la ventana añadir canciones a la biblioteca seleccionada
          */
@@ -119,15 +123,6 @@ public class Application {
         window.setVisible(true);
         mainController.show();
         Application.playlist_controller.getView().Log_out();
-
-        //Ventana songs (selección de canción por biblioteca)
-        //panel.add(view_songs.getPanel());
-
-        //Ventana Añadir Canciones a la biblioteca seleccionada
-        //window.add(view_add_songs.getPanel());
-
-        //Ventana Editar Metadata de la Canción seleccionada
-        //window.add(view_edit_song.getPanel());
 
         musicObject = new Sound();
     }

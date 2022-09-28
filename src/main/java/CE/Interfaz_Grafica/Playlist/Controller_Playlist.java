@@ -1,14 +1,36 @@
 package CE.Interfaz_Grafica.Playlist;
 
 import CE.Application;
-import CE.Interfaz_Grafica.Login.Model_Login;
+import CE.Clases_De_Estructuras_De_Datos.DoubleLinkedList;
+import CE.Clases_Principales.Playlist;
+import CE.Clases_Principales.Service;
+import CE.Clases_Principales.User;
+import CE.Interfaz_Grafica.Create_Playlist.Controller_Create_Playlist;
+import CE.Interfaz_Grafica.Edit_Playlist.Controller_Edit_Playlist;
 import CE.Interfaz_Grafica.Login.View_Login;
-
-import javax.swing.*;
-import java.awt.*;
+/*
+import com.itextpdf.io.font.constants.StandardFonts;
+import com.itextpdf.io.image.ImageDataFactory;
+import com.itextpdf.kernel.colors.Color;
+import com.itextpdf.kernel.colors.ColorConstants;
+import com.itextpdf.kernel.font.PdfFont;
+import com.itextpdf.kernel.font.PdfFontFactory;
+import com.itextpdf.kernel.pdf.PdfDocument;
+import com.itextpdf.kernel.pdf.PdfWriter;
+import com.itextpdf.layout.Document;
+import com.itextpdf.layout.borders.Border;
+import com.itextpdf.layout.element.Cell;
+import com.itextpdf.layout.element.Image;
+import com.itextpdf.layout.element.Paragraph;
+import com.itextpdf.layout.element.Table;
+import com.itextpdf.layout.properties.HorizontalAlignment;
+import com.itextpdf.layout.properties.TextAlignment;
+ */
 
 public class Controller_Playlist {
 
+    Controller_Edit_Playlist controller_edit_playlist;
+    Controller_Create_Playlist controller_create_playlist;
     View_Playlist view;
     Model_Playlist model;
 
@@ -17,11 +39,49 @@ public class Controller_Playlist {
      */
     View_Login view_login = new View_Login();
 
-    public Controller_Playlist(View_Playlist view, Model_Playlist model) {
+    public Controller_Playlist(View_Playlist view, Model_Playlist model, Controller_Edit_Playlist controller_edit_playlist, Controller_Create_Playlist controller_create_playlist) {
+        //model.setLista(Service.instance().playlistSearch(""));
         this.view = view;
         this.model = model;
+        this.controller_edit_playlist = controller_edit_playlist;
+        this.controller_create_playlist = controller_create_playlist;
         view.setController(this);
         view.setModel(model);
+    }
+    public void buscar(String filtro){
+        DoubleLinkedList<Playlist> rows = Service.instance().playlistSearch(filtro);
+        System.out.println(rows.getNumberOfElements());
+        model.setLista(rows);
+        System.out.println(model.getLista().getNumberOfElements());
+        model.commit();
+    }
+    public void edit(int row){
+        String code = model.getUser().getPlaylists().getElement(row).getName();
+        Playlist e = null;
+        try{
+            e = Service.instance().PlaylistGet(code, model.getUser());
+            Application.edit_playlist_controller.edit(e);
+            model.commit();
+        }catch (Exception ex){}
+    }
+    public void borrar(User user, int row){
+        String code = model.getUser().getPlaylists().getElement(row).getName();
+        Playlist e = null;
+        try{
+            e = Service.instance().PlaylistGet(code, model.getUser());
+            Service.instance().removePlaylist(e,user);
+            buscar("");
+
+        }catch (Exception ex){}
+    }
+    public void playlistclick(int row){
+        String code = model.getUser().getPlaylists().getElement(row).getName();
+        Playlist e = null;
+        try{
+            e = Service.instance().PlaylistGet(code, model.getUser());
+            Service.instance().loadPlaylist(e);
+            Application.songs_controller.getModel().commit();
+        }catch (Exception ex){}
     }
     public void log_out(){
         Application.login_controller.show();
@@ -29,15 +89,24 @@ public class Controller_Playlist {
     public void create_playlist(){
         Application.create_playlist_controller.show();
     }
-
-    public void edit_playlist(){
-        Application.edit_playlist_controller.show();
-    }
-
     public View_Playlist getView() {
         return view;
+    }
+    public void setView(View_Playlist view) {this.view = view;}
+    public void setModel(Model_Playlist model) {
+        this.model = model;
     }
     public Model_Playlist getModel() {
         return model;
     }
+    /*
+    private Cell getCell(Paragraph paragraph, TextAlignment alignment, boolean hasBorder) {
+        Cell cell = new Cell().add(paragraph);
+        cell.setPadding(0);
+        cell.setTextAlignment(alignment);
+        if(!hasBorder) cell.setBorder(Border.NO_BORDER);
+        return cell;
+    }
+     */
+
 }

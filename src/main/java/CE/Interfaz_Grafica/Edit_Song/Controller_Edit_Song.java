@@ -29,4 +29,13 @@ public class Controller_Edit_Song {
     public void hide(){
         dialog.dispose();
     }
+    public View_Edit_Song getView() {return view;}
+    public void setView(View_Edit_Song view) {this.view = view;}
+    public Model_Edit_Song getModel() {
+        return model;
+    }
+
+    public void setModel(Model_Edit_Song model) {
+        this.model = model;
+    }
 }

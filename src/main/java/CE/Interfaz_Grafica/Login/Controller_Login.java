@@ -1,7 +1,6 @@
 package CE.Interfaz_Grafica.Login;
 
 import CE.Application;
-import CE.Clases_Principales.CEMusicPlayer;
 import CE.Clases_Principales.Login;
 import CE.Clases_Principales.Service;
 import CE.Clases_Principales.User;

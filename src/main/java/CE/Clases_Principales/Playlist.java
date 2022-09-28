@@ -13,6 +13,16 @@ public class Playlist {
     private String fecha;
 
     /**
+     * Se establece el constructor de esta clase vacio
+     * @param songs Se establece que cada playlist (biblioteca), debera de tener una lista circular de canciones
+     * @param name Se establece que cada playlist (biblioteca), debera de tener un nombre único
+     */
+    public Playlist() {
+        this.songs_Playlist = new DoubleCircledLinkedList<Song>();
+        this.name = "";
+        this.fecha = "";
+    }
+    /**
      * Se establece el constructor de esta clase
      * @param songs Se establece que cada playlist (biblioteca), debera de tener una lista circular de canciones
      * @param name Se establece que cada playlist (biblioteca), debera de tener un nombre único

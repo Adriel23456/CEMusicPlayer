@@ -1,7 +1,5 @@
 package CE.Interfaz_Grafica.Tabbedpane;
 
-import CE.Interfaz_Grafica.Login.Controller_Login;
-
 import javax.swing.*;
 import java.util.Observable;
 import java.util.Observer;

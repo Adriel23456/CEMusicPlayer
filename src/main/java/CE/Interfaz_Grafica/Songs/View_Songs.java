@@ -14,7 +14,6 @@ public class View_Songs implements Observer {
     public static final Boolean[] reproduccion3 = {Boolean.FALSE};
     public static final Boolean[] Allowvolume = {Boolean.FALSE};
     public static final Boolean[] playMusic1 = {Boolean.TRUE};
-
     public static final Boolean[] cancionUNO = {Boolean.FALSE};
     private Controller_Songs controller;
     private Model_Songs model;
@@ -37,17 +36,11 @@ public class View_Songs implements Observer {
     private String reproduccionConstante = "OFF";
     private String cancionFavorita = "OFF";
 
-    public void Add_Song(){
-        controller.add_song();
-    }
-
     public void Edit_Song(){
         controller.edit_song();
     }
 
     public View_Songs() {
-
-
         agregarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -205,6 +198,14 @@ public class View_Songs implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
+        int[] cols = {CE.Interfaz_Grafica.Songs.Table_Model.NOMBRE, CE.Interfaz_Grafica.Songs.Table_Model.ARTISTA, CE.Interfaz_Grafica.Songs.Table_Model.ALBUM};
+        Canciones.setModel(new CE.Interfaz_Grafica.Songs.Table_Model(model.getPlaylist().getSongs(), cols));
+        Canciones.setRowHeight(25);
+        this.panel.revalidate();
+    }
+
+    public void Add_Song(){
+        controller.add_song();
     }
 
     public void setController(Controller_Songs controller) {this.controller = controller;}

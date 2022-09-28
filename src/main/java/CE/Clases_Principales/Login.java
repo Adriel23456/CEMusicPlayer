@@ -1,5 +1,6 @@
 package CE.Clases_Principales;
 
+import CE.Application;
 import CE.Clases_De_Estructuras_De_Datos.DoubleLinkedList;
 
 import javax.swing.*;
@@ -37,6 +38,7 @@ public class Login {
         for (int i = 0; i < users.getNumberOfElements(); i++){
             if (users.getElement(i).getEmail().equals(email)){
                 if (users.getElement(i).getPassword().equals(password)){
+                    Application.playlist_controller.getModel().setUser(users.getElement(i));
                     return true;
                 }
             }

@@ -19,8 +19,6 @@ public class XmlPersister {
     public XmlPersister(String p) {
         path=p;
     }
-
-
     public Song load() throws Exception{
         JAXBContext jaxbContext = JAXBContext.newInstance(Song.class);
         FileInputStream is = new FileInputStream(path);

@@ -68,17 +68,6 @@ public class Song {
                 ", MP3File='"+ MP3File + '}';
     }
 
-    public void registerNewSong(String[] array){
-        Song song = new Song(array[0], array[1], array[2], array[3], array[4], array [5], array [6]);
-        Service.registerSong(song);
-    }
-
-    public void addSong_Playlist(String[] array){
-        //AQUÍ PUEDO ESTABLECER QUE EN VEZ DE RECIBIR UN ARRAY DE STRINGS, RECIBA DIRECTAMENTE EL OBJETO DE SONG SELECCIONADO
-        Song song = new Song(array[0], array[1], array[2], array[3], array[4], array [5], array [6]);
-        Service.addSong_Playlist(song);
-    }
-
 
     public String getName() {return name;}
     public void setName(String name) {this.name = name;}

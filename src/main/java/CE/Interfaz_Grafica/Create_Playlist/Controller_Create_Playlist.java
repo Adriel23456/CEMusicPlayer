@@ -1,6 +1,9 @@
 package CE.Interfaz_Grafica.Create_Playlist;
 
 import CE.Application;
+import CE.Clases_Principales.Playlist;
+import CE.Clases_Principales.Service;
+import CE.Clases_Principales.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -28,5 +31,11 @@ public class Controller_Create_Playlist {
     }
     public void hide(){
         dialog.dispose();
+    }
+
+    public void addplaylist(Playlist playlist){
+        User user = Application.playlist_controller.getModel().getUser();
+        Service.instance().addPlaylist(user,playlist);
+        Application.playlist_controller.getModel().commit();
     }
 }

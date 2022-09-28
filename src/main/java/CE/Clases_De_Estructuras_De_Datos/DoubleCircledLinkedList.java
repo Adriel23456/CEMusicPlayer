@@ -42,14 +42,18 @@ public class DoubleCircledLinkedList<T>{
     public void addCircled(T data){
         //En el caso que la lista este vacía, generara un nuevo Nodo y lo establecerá como el primero:
         if(isEmpty()){
-            this.head = new Node<T>(this.head, this.head, data);
+            this.head = new Node<T>(null, null, data);
+            this.head.setNext(head);
+            this.head.setPrevious(head);
         }
         //En el caso que la lista no este vacía, va a recorrer toda la lista hasta llegar al último elemento, y,
-        // generara el nuevo Nodo:
+        //Generara el nuevo Nodo:
         else{
-            Node<T> temporal = new Node<T>(this.head, this.head.getPrevious(), data);
-            temporal.getPrevious().setNext(temporal);
+            Node<T> temporal = new Node<T>(null, null, data);
+            temporal.setNext(this.head);
+            temporal.setPrevious(this.head.getPrevious());
             this.head.setPrevious(temporal);
+            temporal.getPrevious().setNext(temporal);
         }
         this.numberOfElements++;
     }
